@@ -16,6 +16,7 @@
 		3E3AB35BC42B2B59476D67A8 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DF1758566388F9F9076DD /* HTTPClient.swift */; };
 		47534AD461C4FC6E76BFEBF1 /* APITokenNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558481BCA488F5FDD109F050 /* APITokenNormalizer.swift */; };
 		481DC5BA826E189B5CA9DF46 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4651670B50B67BFF2EF525 /* DashboardViewModel.swift */; };
+		656390B31502FBC67EF61594 /* LiveAPIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EC4B754D84B48F55DB48BB /* LiveAPIIntegrationTests.swift */; };
 		67E11B739E790E8B0783DE88 /* YuvomiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2B45D3CD7DE23ECEA85C2 /* YuvomiApp.swift */; };
 		7470969E71F7304EA46D3609 /* HTTPClientAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4BA38C496D1398866E0153 /* HTTPClientAuthTests.swift */; };
 		77884C32F6708452F032FC4A /* ResponseCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042514348C5BC28AB2ABD314 /* ResponseCacheTests.swift */; };
@@ -90,6 +91,7 @@
 		DA8BBD533E1485EA8A05BADA /* ServerURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerURL.swift; sourceTree = "<group>"; };
 		DCA4360B4E03A5CEDC2AD153 /* Yuvomi.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Yuvomi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E6C2840A7BF012265C3216 /* DashboardSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSnapshot.swift; sourceTree = "<group>"; };
+		F1EC4B754D84B48F55DB48BB /* LiveAPIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveAPIIntegrationTests.swift; sourceTree = "<group>"; };
 		F42E3FD4E63353A2D753BB1A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,6 +231,7 @@
 				8BD7229DAC4304D4D7D4AB40 /* APITokenNormalizerTests.swift */,
 				A82EF6F9CAB71D0A47F851A8 /* AuthSessionStoreTests.swift */,
 				1B4BA38C496D1398866E0153 /* HTTPClientAuthTests.swift */,
+				F1EC4B754D84B48F55DB48BB /* LiveAPIIntegrationTests.swift */,
 				20F6EF5AC883AAAE573D1FF0 /* ModuleKindTests.swift */,
 				042514348C5BC28AB2ABD314 /* ResponseCacheTests.swift */,
 				B80820632A8D6F4572E82A99 /* ServerURLTests.swift */,
@@ -372,6 +375,7 @@
 				899BC7B06DF448159F475FC1 /* APITokenNormalizerTests.swift in Sources */,
 				BB4D9532EBF3DD33CC7E908D /* AuthSessionStoreTests.swift in Sources */,
 				7470969E71F7304EA46D3609 /* HTTPClientAuthTests.swift in Sources */,
+				656390B31502FBC67EF61594 /* LiveAPIIntegrationTests.swift in Sources */,
 				A7D97FC46B336CDD73009182 /* ModuleKindTests.swift in Sources */,
 				77884C32F6708452F032FC4A /* ResponseCacheTests.swift in Sources */,
 				34C552D7DC4B4B0C8B963CA6 /* ServerURLTests.swift in Sources */,
