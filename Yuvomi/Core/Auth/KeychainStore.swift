@@ -27,6 +27,7 @@ struct KeychainStore: SecretStore {
 
         let status = SecItemAdd(query as CFDictionary, nil)
         guard status == errSecSuccess else {
+            AuthLogger.log.error("Keychain set failed account=\(account, privacy: .public) status=\(status)")
             throw KeychainError.unhandled(status)
         }
     }
@@ -46,6 +47,7 @@ struct KeychainStore: SecretStore {
             return nil
         }
         guard status == errSecSuccess else {
+            AuthLogger.log.error("Keychain get failed account=\(account, privacy: .public) status=\(status)")
             throw KeychainError.unhandled(status)
         }
         return item as? Data
@@ -59,13 +61,21 @@ struct KeychainStore: SecretStore {
         ]
         let status = SecItemDelete(query as CFDictionary)
         guard status == errSecSuccess || status == errSecItemNotFound else {
+            AuthLogger.log.error("Keychain delete failed account=\(account, privacy: .public) status=\(status)")
             throw KeychainError.unhandled(status)
         }
     }
 }
 
-enum KeychainError: Error {
+enum KeychainError: LocalizedError {
     case unhandled(OSStatus)
+
+    var errorDescription: String? {
+        switch self {
+        case .unhandled(let status):
+            "Keychain error (\(status)). Try deleting the app and reinstalling, then sign in again."
+        }
+    }
 }
 
 /// Test double.

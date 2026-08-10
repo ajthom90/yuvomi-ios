@@ -59,7 +59,7 @@ final class LiveAPIIntegrationTests: XCTestCase {
         let secrets = InMemorySecretStore()
         let store = AuthSessionStore(secrets: secrets)
         try store.saveAPIToken(token!)
-        try store.saveProfile(
+        try store.persistProfile(
             ServerProfile(
                 serverURL: try ServerURL(raw: urlString!).baseURL.absoluteString,
                 method: .apiToken,

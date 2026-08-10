@@ -12,7 +12,7 @@ final class HTTPClientAuthTests: XCTestCase {
         let secrets = InMemorySecretStore()
         let store = AuthSessionStore(secrets: secrets)
         try store.saveAPIToken("tok-123")
-        try store.saveProfile(
+        try store.persistProfile(
             ServerProfile(serverURL: "https://example.test", method: .apiToken, displayName: nil, username: nil, userId: nil)
         )
 

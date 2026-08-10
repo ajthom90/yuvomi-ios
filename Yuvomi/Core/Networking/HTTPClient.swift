@@ -26,12 +26,19 @@ final class HTTPClient: @unchecked Sendable {
         }
         try await auth?.authorize(&authorized)
 
+        let method = authorized.httpMethod ?? "GET"
+        let urlString = authorized.url?.absoluteString ?? "(nil)"
+        let hasAuth = authorized.value(forHTTPHeaderField: "Authorization") != nil
+            || authorized.value(forHTTPHeaderField: "X-API-Key") != nil
+        AuthLogger.log.info("HTTP \(method, privacy: .public) \(urlString, privacy: .public) authHeader=\(hasAuth)")
+
         let data: Data
         let response: URLResponse
         do {
             (data, response) = try await session.data(for: authorized)
         } catch {
             let ns = error as NSError
+            AuthLogger.log.error("HTTP transport error: \(ns.domain, privacy: .public) \(ns.code) \(ns.localizedDescription, privacy: .public)")
             if ns.domain == NSURLErrorDomain {
                 if ns.code == NSURLErrorNotConnectedToInternet || ns.code == NSURLErrorNetworkConnectionLost {
                     throw APIError.offline
@@ -45,7 +52,11 @@ final class HTTPClient: @unchecked Sendable {
             throw APIError.unknown
         }
 
+        AuthLogger.log.info("HTTP status=\(http.statusCode) bytes=\(data.count)")
+
         guard (200..<300).contains(http.statusCode) else {
+            let snippet = String(data: data, encoding: .utf8).map { String($0.prefix(200)) } ?? ""
+            AuthLogger.log.error("HTTP failure body=\(snippet, privacy: .public)")
             throw APIError.from(statusCode: http.statusCode, body: data)
         }
 
