@@ -51,7 +51,7 @@ struct MoreModulesView: View {
             LazyVGrid(columns: columns, spacing: 16) {
                 ForEach(ModuleKind.moreGridModules) { module in
                     NavigationLink {
-                        ModulePlaceholderView(module: module)
+                        destination(for: module)
                     } label: {
                         VStack(spacing: 10) {
                             Image(systemName: module.systemImage)
@@ -85,5 +85,15 @@ struct MoreModulesView: View {
         }
         .background(Color(.systemGroupedBackground))
         .navigationTitle("More")
+    }
+
+    @ViewBuilder
+    private func destination(for module: ModuleKind) -> some View {
+        switch module {
+        case .meals: MealsView()
+        case .recipes: RecipesView()
+        case .pantry: PantryView()
+        default: ModulePlaceholderView(module: module)
+        }
     }
 }
