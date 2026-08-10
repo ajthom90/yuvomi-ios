@@ -95,6 +95,11 @@ struct MoreModulesView: View {
         case .pantry: PantryView()
         case .budget: BudgetView()
         case .splitExpenses: SplitExpensesView()
+        case .family: FamilyView()
+        case .contacts: ContactsView()
+        case .birthdays: BirthdaysView()
+        case .health: HealthView()
+        case .rewards: RewardsView()
         default: ModulePlaceholderView(module: module)
         }
     }

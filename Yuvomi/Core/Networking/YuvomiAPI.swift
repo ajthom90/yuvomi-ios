@@ -445,4 +445,112 @@ struct YuvomiAPI {
         request.httpMethod = "DELETE"
         try await client.sendVoid(request)
     }
+
+    // MARK: - Family / Contacts / Birthdays
+
+    func fetchFamilyMembers() async throws -> [FamilyMember] {
+        var request = URLRequest(url: server.apiURL(path: "/family/members"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIList<FamilyMember>.self).data
+    }
+
+    func fetchContacts() async throws -> [Contact] {
+        var request = URLRequest(url: server.apiURL(path: "/contacts"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIList<Contact>.self).data
+    }
+
+    func createContact(name: String, phone: String?, email: String?) async throws -> Contact {
+        var request = URLRequest(url: server.apiURL(path: "/contacts"))
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        var body: [String: Any] = ["name": name]
+        if let phone, !phone.isEmpty { body["phone"] = phone }
+        if let email, !email.isEmpty { body["email"] = email }
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
+        return try await client.send(request, as: APIData<Contact>.self).data
+    }
+
+    func deleteContact(id: Int) async throws {
+        var request = URLRequest(url: server.apiURL(path: "/contacts/\(id)"))
+        request.httpMethod = "DELETE"
+        try await client.sendVoid(request)
+    }
+
+    func fetchBirthdays() async throws -> [Birthday] {
+        var request = URLRequest(url: server.apiURL(path: "/birthdays"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIList<Birthday>.self).data
+    }
+
+    func fetchUpcomingBirthdays() async throws -> [Birthday] {
+        var request = URLRequest(url: server.apiURL(path: "/birthdays/upcoming"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIList<Birthday>.self).data
+    }
+
+    func createBirthday(name: String, birthDate: String) async throws -> Birthday {
+        var request = URLRequest(url: server.apiURL(path: "/birthdays"))
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try JSONSerialization.data(withJSONObject: [
+            "name": name,
+            "birth_date": birthDate,
+        ])
+        return try await client.send(request, as: APIData<Birthday>.self).data
+    }
+
+    func deleteBirthday(id: Int) async throws {
+        var request = URLRequest(url: server.apiURL(path: "/birthdays/\(id)"))
+        request.httpMethod = "DELETE"
+        try await client.sendVoid(request)
+    }
+
+    // MARK: - Health
+
+    func fetchVitals() async throws -> [HealthVital] {
+        var request = URLRequest(url: server.apiURL(path: "/health/vitals"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIList<HealthVital>.self).data
+    }
+
+    func createVital(type: String, valueNum: Double, valueNum2: Double?, unit: String?, measuredAt: String) async throws -> HealthVital {
+        var request = URLRequest(url: server.apiURL(path: "/health/vitals"))
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        var body: [String: Any] = [
+            "type": type,
+            "value_num": valueNum,
+            "measured_at": measuredAt,
+        ]
+        if let valueNum2 { body["value_num2"] = valueNum2 }
+        if let unit, !unit.isEmpty { body["unit"] = unit }
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
+        return try await client.send(request, as: APIData<HealthVital>.self).data
+    }
+
+    func deleteVital(id: Int) async throws {
+        var request = URLRequest(url: server.apiURL(path: "/health/vitals/\(id)"))
+        request.httpMethod = "DELETE"
+        try await client.sendVoid(request)
+    }
+
+    // MARK: - Rewards
+
+    func fetchRewardsOverview() async throws -> RewardsOverview {
+        var request = URLRequest(url: server.apiURL(path: "/rewards/overview"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIData<RewardsOverview>.self).data
+    }
+
+    func createReward(name: String, cost: Int) async throws -> RewardCatalogItem {
+        var request = URLRequest(url: server.apiURL(path: "/rewards/catalog"))
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try JSONSerialization.data(withJSONObject: [
+            "name": name,
+            "cost": cost,
+        ])
+        return try await client.send(request, as: APIData<RewardCatalogItem>.self).data
+    }
 }

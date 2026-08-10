@@ -18,7 +18,7 @@ Point the app at **your** server. There is no vendor cloud, no account with us, 
 | **1 — Daily drivers** | Tasks, Shopping, Calendar (core CRUD) | **Shipped** |
 | **2 — Kitchen** | Meals, Recipes, Pantry + shopping handoffs | **Shipped** |
 | **3 — Money** | Budget (accounts/txns/stats), Split expenses | **Shipped** |
-| 4 — People & health | Family, Contacts, Birthdays, Health, Rewards | Planned |
+| **4 — People & health** | Family, Contacts, Birthdays, Health vitals, Rewards | **Shipped** |
 | 5 — Records & ops | Notes, Documents, Housekeeping, Reminders | Planned |
 | 6 — Polish | Admin edges, search, widgets, App Store | Planned |
 
