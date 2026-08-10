@@ -321,4 +321,128 @@ struct YuvomiAPI {
         request.httpBody = try JSONSerialization.data(withJSONObject: ["items": items])
         return try await client.send(request, as: APIData<TransferResult>.self).data
     }
+
+    // MARK: - Budget
+
+    func fetchBudgetEntries() async throws -> [BudgetEntry] {
+        var request = URLRequest(url: server.apiURL(path: "/budget"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIList<BudgetEntry>.self).data
+    }
+
+    func fetchBudgetAccounts() async throws -> BudgetAccountsPayload {
+        var request = URLRequest(url: server.apiURL(path: "/budget/accounts"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIData<BudgetAccountsPayload>.self).data
+    }
+
+    func fetchBudgetCategories() async throws -> [BudgetCategory] {
+        var request = URLRequest(url: server.apiURL(path: "/budget/categories"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIList<BudgetCategory>.self).data
+    }
+
+    func fetchBudgetStats() async throws -> BudgetStatsPayload {
+        var request = URLRequest(url: server.apiURL(path: "/budget/stats"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIData<BudgetStatsPayload>.self).data
+    }
+
+    func createBudgetAccount(name: String, type: String, startingBalance: Double) async throws -> BudgetAccount {
+        var request = URLRequest(url: server.apiURL(path: "/budget/accounts"))
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let body: [String: Any] = [
+            "name": name,
+            "type": type,
+            "starting_balance": startingBalance,
+        ]
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
+        return try await client.send(request, as: APIData<BudgetAccount>.self).data
+    }
+
+    func createBudgetEntry(title: String, amount: Double, category: String, date: String, accountId: Int?) async throws -> BudgetEntry {
+        var request = URLRequest(url: server.apiURL(path: "/budget"))
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        var body: [String: Any] = [
+            "title": title,
+            "amount": amount,
+            "category": category,
+            "date": date,
+        ]
+        if let accountId { body["account_id"] = accountId }
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
+        return try await client.send(request, as: APIData<BudgetEntry>.self).data
+    }
+
+    func deleteBudgetEntry(id: Int) async throws {
+        var request = URLRequest(url: server.apiURL(path: "/budget/\(id)"))
+        request.httpMethod = "DELETE"
+        try await client.sendVoid(request)
+    }
+
+    // MARK: - Split expenses
+
+    func fetchSplitGroups() async throws -> [SplitGroup] {
+        var request = URLRequest(url: server.apiURL(path: "/split-expenses/groups"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIList<SplitGroup>.self).data
+    }
+
+    func fetchSplitDashboard() async throws -> SplitDashboardPayload {
+        var request = URLRequest(url: server.apiURL(path: "/split-expenses/dashboard"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIData<SplitDashboardPayload>.self).data
+    }
+
+    func createSplitGroup(name: String) async throws -> SplitGroup {
+        var request = URLRequest(url: server.apiURL(path: "/split-expenses/groups"))
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try JSONSerialization.data(withJSONObject: ["name": name])
+        return try await client.send(request, as: APIData<SplitGroup>.self).data
+    }
+
+    func fetchSplitExpenses(groupId: Int) async throws -> [SplitExpense] {
+        var request = URLRequest(url: server.apiURL(path: "/split-expenses/groups/\(groupId)/expenses"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: SplitExpensesPage.self).data
+    }
+
+    func fetchSplitBalances(groupId: Int) async throws -> SplitBalancesPayload {
+        var request = URLRequest(url: server.apiURL(path: "/split-expenses/groups/\(groupId)/balances"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIData<SplitBalancesPayload>.self).data
+    }
+
+    func createSplitExpense(
+        groupId: Int,
+        title: String,
+        amount: String,
+        expenseDate: String,
+        payerId: Int?,
+        category: String?,
+        splitMethod: String = "equal"
+    ) async throws -> SplitExpense {
+        var request = URLRequest(url: server.apiURL(path: "/split-expenses/groups/\(groupId)/expenses"))
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        var body: [String: Any] = [
+            "title": title,
+            "amount": amount,
+            "expense_date": expenseDate,
+            "split_method": splitMethod,
+        ]
+        if let payerId { body["payer_id"] = payerId }
+        if let category, !category.isEmpty { body["category"] = category }
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
+        return try await client.send(request, as: APIData<SplitExpense>.self).data
+    }
+
+    func deleteSplitExpense(id: Int) async throws {
+        var request = URLRequest(url: server.apiURL(path: "/split-expenses/expenses/\(id)"))
+        request.httpMethod = "DELETE"
+        try await client.sendVoid(request)
+    }
 }
