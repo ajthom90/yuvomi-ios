@@ -645,6 +645,38 @@ struct YuvomiAPI {
         return try await client.send(request, as: APIList<FamilyDocument>.self).data
     }
 
+    /// Upload via base64 data URL (`content_data`) — matches Yuvomi web client contract.
+    func uploadDocument(
+        name: String,
+        originalName: String,
+        mimeType: String,
+        fileData: Data,
+        category: String = "other",
+        visibility: String = "family"
+    ) async throws -> FamilyDocument {
+        var request = URLRequest(url: server.apiURL(path: "/documents"))
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let dataURL = "data:\(mimeType);base64,\(fileData.base64EncodedString())"
+        let body: [String: Any] = [
+            "name": name,
+            "original_name": originalName,
+            "category": category,
+            "visibility": visibility,
+            "content_data": dataURL,
+        ]
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
+        return try await client.send(request, as: APIData<FamilyDocument>.self).data
+    }
+
+    func downloadDocument(id: Int) async throws -> (Data, String?) {
+        var request = URLRequest(url: server.apiURL(path: "/documents/\(id)/download"))
+        request.httpMethod = "GET"
+        // sendData returns body only — use raw session via client
+        let data = try await client.sendData(request)
+        return (data, nil)
+    }
+
     func deleteDocument(id: Int) async throws {
         var request = URLRequest(url: server.apiURL(path: "/documents/\(id)"))
         request.httpMethod = "DELETE"

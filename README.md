@@ -21,6 +21,7 @@ Point the app at **your** server. There is no vendor cloud, no account with us, 
 | **4 — People & health** | Family, Contacts, Birthdays, Health vitals, Rewards | **Shipped** |
 | **5 — Records & ops** | Notes, Documents list, Housekeeping dashboard, Reminders | **Shipped** |
 | **6 — Polish** | Rich dashboard, global search, admin invites | **Shipped (core)** |
+| **7 — Store prep** | Document upload/download, local reminder notifications, privacy policy | **Shipped** |
 
 Design: [`docs/superpowers/specs/2026-08-10-yuvomi-ios-design.md`](docs/superpowers/specs/2026-08-10-yuvomi-ios-design.md)  
 Phase 0 plan: [`docs/superpowers/plans/2026-08-10-yuvomi-ios-phase0.md`](docs/superpowers/plans/2026-08-10-yuvomi-ios-phase0.md)
@@ -57,8 +58,10 @@ Source is free under the MIT License. A paid App Store build may be offered to s
 ## Privacy
 
 - Data is sent only to the server URL you configure.
-- Tokens and session material live in the Keychain.
+- Tokens and session material live in the Keychain (with a local fallback when needed).
+- Local notifications only (no APNs cloud).
 - No analytics in the default open-source build.
+- Full policy: [`docs/PRIVACY.md`](docs/PRIVACY.md)
 
 ## License
 

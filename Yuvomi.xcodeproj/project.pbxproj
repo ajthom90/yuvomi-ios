@@ -13,6 +13,7 @@
 		0BFC405553EE420CC925826C /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7321E4D041FC5F46C1F0C503 /* CalendarEvent.swift */; };
 		141B3BFF3581E95344AE58B0 /* MoneyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69445ADAF5BDBAFAED5977B /* MoneyModels.swift */; };
 		1572C6E55ABA1DCDAE18F50E /* DashboardModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787C1DAA12AEA6FE47B03B3D /* DashboardModels.swift */; };
+		1656F621170937FD5A3FCA84 /* DocumentUploadEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFEB7AB6D09BA2E0878D0C0 /* DocumentUploadEncodingTests.swift */; };
 		18409E622F73655595BEE13F /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B602886D6259CE85C8DFCCCF /* MainTabView.swift */; };
 		19082D3CA97DB93610924261 /* BudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7AD807E3F61E7A642569B2 /* BudgetViewModel.swift */; };
 		1F5CFCFB0BA5CCFA5222F426 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC5CC12B229119D3D0D7BF /* NotesView.swift */; };
@@ -28,6 +29,7 @@
 		481DC5BA826E189B5CA9DF46 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4651670B50B67BFF2EF525 /* DashboardViewModel.swift */; };
 		48501B69F7758CAE4D1B0DFC /* MoneyModelDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5548F41936C9F5C38C218C00 /* MoneyModelDecodingTests.swift */; };
 		48E43EB9E9A72987D770EA75 /* MealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9EF4FDA05E44D4B41F4C4 /* MealsView.swift */; };
+		4D6228D31A49D83DF7561C39 /* ReminderNotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A346975B9864FC338766FAB /* ReminderNotificationScheduler.swift */; };
 		5C136E548F5C7736A88E520A /* InvitesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE947C363FD6109EF9C351F /* InvitesView.swift */; };
 		5EE34B08411BA81EF06B5E8C /* ShoppingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103570698F351595D730250E /* ShoppingModels.swift */; };
 		603C2D4C93888AF68F55909C /* FamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFF40D2267E72EFDC9ADAD5 /* FamilyView.swift */; };
@@ -102,9 +104,11 @@
 /* Begin PBXFileReference section */
 		00F460565376B51F68DFA577 /* PeopleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModels.swift; sourceTree = "<group>"; };
 		042514348C5BC28AB2ABD314 /* ResponseCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCacheTests.swift; sourceTree = "<group>"; };
+		0A346975B9864FC338766FAB /* ReminderNotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderNotificationScheduler.swift; sourceTree = "<group>"; };
 		103570698F351595D730250E /* ShoppingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingModels.swift; sourceTree = "<group>"; };
 		11219D34E961FA2FC969A1AE /* CalendarAgendaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAgendaView.swift; sourceTree = "<group>"; };
 		1B4BA38C496D1398866E0153 /* HTTPClientAuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientAuthTests.swift; sourceTree = "<group>"; };
+		1EFEB7AB6D09BA2E0878D0C0 /* DocumentUploadEncodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentUploadEncodingTests.swift; sourceTree = "<group>"; };
 		20F6EF5AC883AAAE573D1FF0 /* ModuleKindTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleKindTests.swift; sourceTree = "<group>"; };
 		2600D4BEB166C952DB6A988A /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		2AB15C03EAF35B5E5B38B286 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
@@ -365,6 +369,7 @@
 				31EE6C074D089D8D150BF2EC /* Cache */,
 				5DA6E548A0EEC15F4FDAF769 /* Models */,
 				ADA7FEE1AD0A7627AE4D3336 /* Networking */,
+				ADB73C2CDCA5CEE8FE8692C1 /* Notifications */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -453,6 +458,14 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		ADB73C2CDCA5CEE8FE8692C1 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				0A346975B9864FC338766FAB /* ReminderNotificationScheduler.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		B2D694693CF136AC6C1E49CF /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +481,7 @@
 				8BD7229DAC4304D4D7D4AB40 /* APITokenNormalizerTests.swift */,
 				A82EF6F9CAB71D0A47F851A8 /* AuthSessionStoreTests.swift */,
 				8148200846C7C649D71FB57A /* DashboardSearchDecodingTests.swift */,
+				1EFEB7AB6D09BA2E0878D0C0 /* DocumentUploadEncodingTests.swift */,
 				1B4BA38C496D1398866E0153 /* HTTPClientAuthTests.swift */,
 				D94D34329DE48711F0764748 /* KitchenModelDecodingTests.swift */,
 				F1EC4B754D84B48F55DB48BB /* LiveAPIIntegrationTests.swift */,
@@ -661,6 +675,7 @@
 				E36D9E91E0D448041C15FAC2 /* RecipesView.swift in Sources */,
 				09D8773EADBBFDEEC308C5CF /* RecipesViewModel.swift in Sources */,
 				8CE92AFFACFBAF28B01B6070 /* RecordsModels.swift in Sources */,
+				4D6228D31A49D83DF7561C39 /* ReminderNotificationScheduler.swift in Sources */,
 				27012AFFD610D5B8F00DAFD1 /* RemindersView.swift in Sources */,
 				65D763831FC1D532EB56EA93 /* ResilientSecretStore.swift in Sources */,
 				910228F29A95A2AC9C2368DC /* ResponseCache.swift in Sources */,
@@ -693,6 +708,7 @@
 				899BC7B06DF448159F475FC1 /* APITokenNormalizerTests.swift in Sources */,
 				BB4D9532EBF3DD33CC7E908D /* AuthSessionStoreTests.swift in Sources */,
 				E5D29AE04962B68BC15C4F74 /* DashboardSearchDecodingTests.swift in Sources */,
+				1656F621170937FD5A3FCA84 /* DocumentUploadEncodingTests.swift in Sources */,
 				7470969E71F7304EA46D3609 /* HTTPClientAuthTests.swift in Sources */,
 				8756D880BE2109FB8AFBF2E5 /* KitchenModelDecodingTests.swift in Sources */,
 				656390B31502FBC67EF61594 /* LiveAPIIntegrationTests.swift in Sources */,
@@ -747,6 +763,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Yuvomi;
 				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Yuvomi can reach your self-hosted server on the local network.";
+				INFOPLIST_KEY_NSUserNotificationsUsageDescription = "Yuvomi schedules local reminders for tasks and calendar events from your server.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -794,7 +811,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -807,7 +824,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -853,7 +870,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -872,7 +889,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -897,6 +914,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Yuvomi;
 				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Yuvomi can reach your self-hosted server on the local network.";
+				INFOPLIST_KEY_NSUserNotificationsUsageDescription = "Yuvomi schedules local reminders for tasks and calendar events from your server.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

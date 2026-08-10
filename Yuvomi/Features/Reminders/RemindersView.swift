@@ -14,6 +14,10 @@ final class RemindersViewModel: ObservableObject {
         defer { isLoading = false }
         do {
             reminders = try await dependencies.makeAPI().fetchPendingReminders()
+            await ReminderNotificationScheduler.sync(reminders: reminders)
+            if statusMessage == nil {
+                statusMessage = "Local notifications refreshed for pending reminders."
+            }
         } catch {
             errorMessage = (error as? LocalizedError)?.errorDescription ?? error.localizedDescription
         }
@@ -40,8 +44,11 @@ struct RemindersView: View {
                     if let error = vm.errorMessage {
                         Section { Text(error).foregroundStyle(.red).font(.footnote) }
                     }
+                    if let status = vm.statusMessage {
+                        Section { Text(status).font(.footnote).foregroundStyle(YuvomiColors.time) }
+                    }
                     Section {
-                        Text("Pending reminders from tasks and calendar events on your Yuvomi server. Local push notifications will be added later.")
+                        Text("Pending reminders from your Yuvomi server. This app schedules local notifications on this device (no Apple Push / APNs required).")
                             .font(.footnote)
                             .foregroundStyle(.secondary)
                     }

@@ -64,6 +64,10 @@ struct SettingsView: View {
                 LabeledContent("App", value: Bundle.main.appVersionString)
                 Link("Source on GitHub", destination: URL(string: "https://github.com/ajthom90/yuvomi-ios")!)
                 Link("Yuvomi server", destination: URL(string: "https://github.com/ulsklyc/yuvomi")!)
+                Link(
+                    "Privacy policy",
+                    destination: URL(string: "https://github.com/ajthom90/yuvomi-ios/blob/main/docs/PRIVACY.md")!
+                )
                 Text("Community native client. MIT License. Data stays on your server.")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
