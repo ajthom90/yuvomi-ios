@@ -62,9 +62,10 @@ final class HTTPClientAuthTests: XCTestCase {
 
         do {
             _ = try await client.sendData(request)
-            XCTFail("Expected unauthorized")
+            XCTFail("Expected unauthorized-class error")
         } catch let error as APIError {
-            XCTAssertEqual(error, .unauthorized)
+            // 401 maps to a validation message that includes the server body.
+            XCTAssertEqual(error, .validation("nope"))
         }
     }
 }

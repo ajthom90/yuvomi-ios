@@ -58,9 +58,9 @@ final class DashboardViewModel: ObservableObject {
                 }
             }
             errorMessage = (error as? LocalizedError)?.errorDescription ?? error.localizedDescription
-            if error as? APIError == .unauthorized {
-                try? dependencies.authStore.clearAll()
-            }
+            // Do not auto-sign-out on a single failed dashboard load — that made
+            // successful logins look like "couldn't log in" when cookies/scopes
+            // blocked only /dashboard. User can sign out from Settings.
         }
     }
 }

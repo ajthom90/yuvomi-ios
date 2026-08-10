@@ -14,7 +14,8 @@ final class HTTPClient: @unchecked Sendable {
         do {
             return try decoder.decode(T.self, from: data)
         } catch {
-            throw APIError.decoding(error.localizedDescription)
+            let snippet = String(data: data, encoding: .utf8).map { String($0.prefix(180)) } ?? "non-UTF8 body"
+            throw APIError.decoding("\(error.localizedDescription) — body: \(snippet)")
         }
     }
 

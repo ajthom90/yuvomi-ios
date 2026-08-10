@@ -40,7 +40,7 @@ final class AuthSessionStore: ObservableObject {
     }
 
     func saveAPIToken(_ token: String) throws {
-        let trimmed = token.trimmingCharacters(in: .whitespacesAndNewlines)
+        let trimmed = APITokenNormalizer.normalize(token)
         guard !trimmed.isEmpty else { return }
         try secrets.set(Data(trimmed.utf8), account: Account.apiToken)
     }

@@ -14,10 +14,12 @@
 		273213F51D6D432B2ACA668A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D86A1F7B386ACB2CC0EB5 /* SettingsView.swift */; };
 		34C552D7DC4B4B0C8B963CA6 /* ServerURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80820632A8D6F4572E82A99 /* ServerURLTests.swift */; };
 		3E3AB35BC42B2B59476D67A8 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DF1758566388F9F9076DD /* HTTPClient.swift */; };
+		47534AD461C4FC6E76BFEBF1 /* APITokenNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558481BCA488F5FDD109F050 /* APITokenNormalizer.swift */; };
 		481DC5BA826E189B5CA9DF46 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4651670B50B67BFF2EF525 /* DashboardViewModel.swift */; };
 		67E11B739E790E8B0783DE88 /* YuvomiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2B45D3CD7DE23ECEA85C2 /* YuvomiApp.swift */; };
 		7470969E71F7304EA46D3609 /* HTTPClientAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4BA38C496D1398866E0153 /* HTTPClientAuthTests.swift */; };
 		77884C32F6708452F032FC4A /* ResponseCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042514348C5BC28AB2ABD314 /* ResponseCacheTests.swift */; };
+		899BC7B06DF448159F475FC1 /* APITokenNormalizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD7229DAC4304D4D7D4AB40 /* APITokenNormalizerTests.swift */; };
 		8A303201D63A10343BD77268 /* AuthSessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8464E9B7470860C56DC6BB6 /* AuthSessionStore.swift */; };
 		8FDDCBEAB2F78AC6338C0C61 /* YuvomiColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73351EE428D3DB05C66F2958 /* YuvomiColors.swift */; };
 		910228F29A95A2AC9C2368DC /* ResponseCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F2CBB2DBF91D45FAE5B8A /* ResponseCache.swift */; };
@@ -28,6 +30,7 @@
 		A2A23D31FD8BEFD1B46CAF29 /* AuthHeaderProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E89223BEE46688DD7A45BF /* AuthHeaderProviding.swift */; };
 		A6D3AF80FC3D0AB4C820F1F6 /* ModuleKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEE790700E98D899EFBF090 /* ModuleKind.swift */; };
 		A7D97FC46B336CDD73009182 /* ModuleKindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F6EF5AC883AAAE573D1FF0 /* ModuleKindTests.swift */; };
+		AE520B147F9C1FB766C6CE37 /* UserDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894DFDEA5E75D5BD82CBEDAE /* UserDecodingTests.swift */; };
 		BB4D9532EBF3DD33CC7E908D /* AuthSessionStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EF6F9CAB71D0A47F851A8 /* AuthSessionStoreTests.swift */; };
 		BC3079FFDF6DEC15C453CF42 /* AuthCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951950924BBF561D4DEBD8C1 /* AuthCredentials.swift */; };
 		BFFC9D70FC38F30DA037C357 /* VersionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4465EB39E7B62739F9D60451 /* VersionInfo.swift */; };
@@ -61,6 +64,7 @@
 		4087DE2834948E92DD79EA67 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		4465EB39E7B62739F9D60451 /* VersionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionInfo.swift; sourceTree = "<group>"; };
 		4F8A01C3AB477A222987E889 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		558481BCA488F5FDD109F050 /* APITokenNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITokenNormalizer.swift; sourceTree = "<group>"; };
 		55F8D3011346F14DD81CB0F5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5AEE790700E98D899EFBF090 /* ModuleKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleKind.swift; sourceTree = "<group>"; };
 		5B35275745508637C2AE9737 /* ModulePlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulePlaceholderView.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 		78C7D6068A61B454A8A8D9A3 /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
 		7F9D94936C79143238804FB9 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		810E8D767D848F58D60E1305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		894DFDEA5E75D5BD82CBEDAE /* UserDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDecodingTests.swift; sourceTree = "<group>"; };
+		8BD7229DAC4304D4D7D4AB40 /* APITokenNormalizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITokenNormalizerTests.swift; sourceTree = "<group>"; };
 		8E2DF1758566388F9F9076DD /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		951950924BBF561D4DEBD8C1 /* AuthCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCredentials.swift; sourceTree = "<group>"; };
 		A4A0954C8094751F769189FF /* YuvomiTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = YuvomiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,11 +226,13 @@
 		B5B9BC7DAFA0DAAA043F6433 /* YuvomiTests */ = {
 			isa = PBXGroup;
 			children = (
+				8BD7229DAC4304D4D7D4AB40 /* APITokenNormalizerTests.swift */,
 				A82EF6F9CAB71D0A47F851A8 /* AuthSessionStoreTests.swift */,
 				1B4BA38C496D1398866E0153 /* HTTPClientAuthTests.swift */,
 				20F6EF5AC883AAAE573D1FF0 /* ModuleKindTests.swift */,
 				042514348C5BC28AB2ABD314 /* ResponseCacheTests.swift */,
 				B80820632A8D6F4572E82A99 /* ServerURLTests.swift */,
+				894DFDEA5E75D5BD82CBEDAE /* UserDecodingTests.swift */,
 			);
 			path = YuvomiTests;
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 		E9EDA42D032C3845E121F98A /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				558481BCA488F5FDD109F050 /* APITokenNormalizer.swift */,
 				951950924BBF561D4DEBD8C1 /* AuthCredentials.swift */,
 				B8464E9B7470860C56DC6BB6 /* AuthSessionStore.swift */,
 				7F9D94936C79143238804FB9 /* KeychainStore.swift */,
@@ -327,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				963C3C86F5AAA4A0020E1EF6 /* APIError.swift in Sources */,
+				47534AD461C4FC6E76BFEBF1 /* APITokenNormalizer.swift in Sources */,
 				0197EA20B779A40DFEA03226 /* AppDependencies.swift in Sources */,
 				E441AF34962FDA0731B7331B /* AppRootView.swift in Sources */,
 				BC3079FFDF6DEC15C453CF42 /* AuthCredentials.swift in Sources */,
@@ -359,11 +369,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				899BC7B06DF448159F475FC1 /* APITokenNormalizerTests.swift in Sources */,
 				BB4D9532EBF3DD33CC7E908D /* AuthSessionStoreTests.swift in Sources */,
 				7470969E71F7304EA46D3609 /* HTTPClientAuthTests.swift in Sources */,
 				A7D97FC46B336CDD73009182 /* ModuleKindTests.swift in Sources */,
 				77884C32F6708452F032FC4A /* ResponseCacheTests.swift in Sources */,
 				34C552D7DC4B4B0C8B963CA6 /* ServerURLTests.swift in Sources */,
+				AE520B147F9C1FB766C6CE37 /* UserDecodingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
