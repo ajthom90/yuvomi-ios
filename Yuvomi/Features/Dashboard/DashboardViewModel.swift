@@ -2,7 +2,7 @@ import Foundation
 
 @MainActor
 final class DashboardViewModel: ObservableObject {
-    @Published private(set) var snapshot: DashboardSnapshot?
+    @Published private(set) var payload: DashboardPayload?
     @Published private(set) var isLoading = false
     @Published private(set) var errorMessage: String?
     @Published private(set) var isShowingCached = false
@@ -26,16 +26,12 @@ final class DashboardViewModel: ObservableObject {
         do {
             let api = try dependencies.makeAPI()
             let data = try await api.fetchDashboardData()
-            let snap = try DashboardSnapshot(data: data)
-            snapshot = snap
+            let decoded = try JSONDecoder().decode(DashboardPayload.self, from: data)
+            payload = decoded
             isShowingCached = false
             cacheDate = nil
 
-            let key = ResponseCache.key(
-                host: api.server.host,
-                userId: userId,
-                path: "/dashboard"
-            )
+            let key = ResponseCache.key(host: api.server.host, userId: userId, path: "/dashboard")
             try? await dependencies.cache.store(key: key, data: data)
 
             if dependencies.authStore.currentUser == nil {
@@ -44,23 +40,18 @@ final class DashboardViewModel: ObservableObject {
                 }
             }
         } catch {
-            // Fall back to cache
             if let profile = dependencies.authStore.profile,
                let server = try? ServerURL(raw: profile.serverURL) {
                 let key = ResponseCache.key(host: server.host, userId: userId, path: "/dashboard")
                 if let cached = await dependencies.cache.load(key: key),
-                   let snap = try? DashboardSnapshot(data: cached.data, fetchedAt: cached.savedAt) {
-                    snapshot = snap
+                   let decoded = try? JSONDecoder().decode(DashboardPayload.self, from: cached.data) {
+                    payload = decoded
                     isShowingCached = true
                     cacheDate = cached.savedAt
-                    errorMessage = nil
                     return
                 }
             }
             errorMessage = (error as? LocalizedError)?.errorDescription ?? error.localizedDescription
-            // Do not auto-sign-out on a single failed dashboard load — that made
-            // successful logins look like "couldn't log in" when cookies/scopes
-            // blocked only /dashboard. User can sign out from Settings.
         }
     }
 }

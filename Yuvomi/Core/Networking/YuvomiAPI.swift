@@ -42,12 +42,52 @@ struct YuvomiAPI {
         try await client.sendVoid(request)
     }
 
-    // MARK: - Dashboard
+    // MARK: - Dashboard / Search / Invites
 
     func fetchDashboardData() async throws -> Data {
         var request = URLRequest(url: server.apiURL(path: "/dashboard"))
         request.httpMethod = "GET"
         return try await client.sendData(request)
+    }
+
+    func fetchDashboard() async throws -> DashboardPayload {
+        var request = URLRequest(url: server.apiURL(path: "/dashboard"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: DashboardPayload.self)
+    }
+
+    func search(query: String) async throws -> SearchResults {
+        var components = URLComponents(url: server.apiURL(path: "/search"), resolvingAgainstBaseURL: false)!
+        components.queryItems = [URLQueryItem(name: "q", value: query)]
+        var request = URLRequest(url: components.url!)
+        request.httpMethod = "GET"
+        return try await client.send(request, as: SearchResults.self)
+    }
+
+    func fetchInvites() async throws -> [Invite] {
+        var request = URLRequest(url: server.apiURL(path: "/auth/invites"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIData<InvitesListPayload>.self).data.invites
+    }
+
+    func createInvite(username: String?, displayName: String, role: String = "member", familyRole: String = "other") async throws -> InviteCreateResponse {
+        var request = URLRequest(url: server.apiURL(path: "/auth/invites"))
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        var body: [String: Any] = [
+            "display_name": displayName,
+            "role": role,
+            "family_role": familyRole,
+        ]
+        if let username, !username.isEmpty { body["username"] = username }
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
+        return try await client.send(request, as: APIData<InviteCreateResponse>.self).data
+    }
+
+    func revokeInvite(id: Int) async throws {
+        var request = URLRequest(url: server.apiURL(path: "/auth/invites/\(id)"))
+        request.httpMethod = "DELETE"
+        try await client.sendVoid(request)
     }
 
     // MARK: - Tasks

@@ -27,6 +27,21 @@ struct SettingsView: View {
                 LabeledContent("URL", value: authStore.profile?.serverURL ?? "—")
             }
 
+            Section("Household") {
+                NavigationLink {
+                    SearchView()
+                } label: {
+                    Label("Search", systemImage: "magnifyingglass")
+                }
+                if authStore.currentUser?.isAdmin == true || authStore.profile?.method == .apiToken {
+                    NavigationLink {
+                        InvitesView()
+                    } label: {
+                        Label("Invites", systemImage: "person.badge.plus")
+                    }
+                }
+            }
+
             Section("Data") {
                 Button("Clear offline cache") {
                     Task {
