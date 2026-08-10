@@ -42,6 +42,9 @@ targets:
     platform: iOS
     sources:
       - path: YuvomiTests
+        excludes:
+          - "LiveCredentials.local.json"
+          - "*.local.json"
     dependencies:
       - target: Yuvomi
     settings:

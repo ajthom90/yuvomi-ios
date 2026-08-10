@@ -46,3 +46,4 @@ Secrets.xcconfig
 # Testing
 *.xcresult
 coverage/
+YuvomiTests/LiveCredentials.local.json
