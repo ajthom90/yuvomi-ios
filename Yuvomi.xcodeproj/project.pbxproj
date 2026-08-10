@@ -21,8 +21,10 @@
 		25DF27BD6F0B1C4349A762DC /* BudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942CCB4EE4236D88F32C4505 /* BudgetView.swift */; };
 		27012AFFD610D5B8F00DAFD1 /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153B13EF4D59B7852546AFA /* RemindersView.swift */; };
 		273213F51D6D432B2ACA668A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D86A1F7B386ACB2CC0EB5 /* SettingsView.swift */; };
+		2ADA53E086C9A7299B000068 /* HealthKitMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB409F75FBAEED6F16EE71 /* HealthKitMappingTests.swift */; };
 		2E03397F241E2CCA2B4784AD /* CalendarAgendaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11219D34E961FA2FC969A1AE /* CalendarAgendaView.swift */; };
 		34C552D7DC4B4B0C8B963CA6 /* ServerURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80820632A8D6F4572E82A99 /* ServerURLTests.swift */; };
+		387EB02D5C6AD73EE1C699AA /* HealthKitImportPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03BEB344CEE003775211029 /* HealthKitImportPreferences.swift */; };
 		3E3AB35BC42B2B59476D67A8 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DF1758566388F9F9076DD /* HTTPClient.swift */; };
 		42B20A8701EB3136D3B7A169 /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B012B7F1FCCFE93FE91CB1C /* HealthView.swift */; };
 		47534AD461C4FC6E76BFEBF1 /* APITokenNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558481BCA488F5FDD109F050 /* APITokenNormalizer.swift */; };
@@ -30,7 +32,9 @@
 		48501B69F7758CAE4D1B0DFC /* MoneyModelDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5548F41936C9F5C38C218C00 /* MoneyModelDecodingTests.swift */; };
 		48E43EB9E9A72987D770EA75 /* MealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A9EF4FDA05E44D4B41F4C4 /* MealsView.swift */; };
 		4D6228D31A49D83DF7561C39 /* ReminderNotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A346975B9864FC338766FAB /* ReminderNotificationScheduler.swift */; };
+		506D8BA73F6A7BE6A1D682B6 /* HealthKitMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF788D57CC4EDAA430B2DAC8 /* HealthKitMapping.swift */; };
 		5C136E548F5C7736A88E520A /* InvitesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE947C363FD6109EF9C351F /* InvitesView.swift */; };
+		5ECD91C12B742D8EF4C9E816 /* HealthKitImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF45002BCF9A4C56F91FB8A /* HealthKitImporter.swift */; };
 		5EE34B08411BA81EF06B5E8C /* ShoppingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103570698F351595D730250E /* ShoppingModels.swift */; };
 		603C2D4C93888AF68F55909C /* FamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFF40D2267E72EFDC9ADAD5 /* FamilyView.swift */; };
 		656390B31502FBC67EF61594 /* LiveAPIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EC4B754D84B48F55DB48BB /* LiveAPIIntegrationTests.swift */; };
@@ -43,6 +47,7 @@
 		7417D6D1FA8AC091A3B9F78E /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB99197751C8E408CE513AD3 /* ContactsView.swift */; };
 		7470969E71F7304EA46D3609 /* HTTPClientAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4BA38C496D1398866E0153 /* HTTPClientAuthTests.swift */; };
 		77884C32F6708452F032FC4A /* ResponseCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042514348C5BC28AB2ABD314 /* ResponseCacheTests.swift */; };
+		7C6EE628546395DFCB739820 /* HealthKitImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60B4594874E99C38B976F5F /* HealthKitImportView.swift */; };
 		7D609036E33C5EE675D5830B /* SplitExpensesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDCB7AB2340D9622BC46E0E /* SplitExpensesViewModel.swift */; };
 		828B4ADB30355FEE23AAEE27 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794C49F269A2B2C220030947 /* SearchView.swift */; };
 		836E35A09DDA79A58A3A03DF /* ShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DE1479A5DA04558682B246 /* ShoppingView.swift */; };
@@ -129,6 +134,7 @@
 		55F8D3011346F14DD81CB0F5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5AEE790700E98D899EFBF090 /* ModuleKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleKind.swift; sourceTree = "<group>"; };
 		5B35275745508637C2AE9737 /* ModulePlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulePlaceholderView.swift; sourceTree = "<group>"; };
+		5BF45002BCF9A4C56F91FB8A /* HealthKitImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitImporter.swift; sourceTree = "<group>"; };
 		5CDCB7AB2340D9622BC46E0E /* SplitExpensesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitExpensesViewModel.swift; sourceTree = "<group>"; };
 		5F4651670B50B67BFF2EF525 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		62488EF87258939D4842431A /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 		942CCB4EE4236D88F32C4505 /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
 		951950924BBF561D4DEBD8C1 /* AuthCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCredentials.swift; sourceTree = "<group>"; };
 		9716F8E2056B3A54ED8A4F19 /* PantryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryViewModel.swift; sourceTree = "<group>"; };
+		99AB409F75FBAEED6F16EE71 /* HealthKitMappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitMappingTests.swift; sourceTree = "<group>"; };
 		9FE947C363FD6109EF9C351F /* InvitesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitesView.swift; sourceTree = "<group>"; };
 		A033BFA4E06CC931B021319C /* HousekeepingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousekeepingView.swift; sourceTree = "<group>"; };
 		A4A0954C8094751F769189FF /* YuvomiTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = YuvomiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +171,7 @@
 		AEFF40D2267E72EFDC9ADAD5 /* FamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyView.swift; sourceTree = "<group>"; };
 		B065B9F586DA55B9312CA34A /* SplitExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitExpensesView.swift; sourceTree = "<group>"; };
 		B602886D6259CE85C8DFCCCF /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		B60B4594874E99C38B976F5F /* HealthKitImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitImportView.swift; sourceTree = "<group>"; };
 		B69445ADAF5BDBAFAED5977B /* MoneyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyModels.swift; sourceTree = "<group>"; };
 		B6B84FC2937DB41E622CE5FE /* FileSecretStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSecretStore.swift; sourceTree = "<group>"; };
 		B80820632A8D6F4572E82A99 /* ServerURLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerURLTests.swift; sourceTree = "<group>"; };
@@ -171,6 +179,7 @@
 		BADC5CC12B229119D3D0D7BF /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		BD3563A82F7A115990F4ED1F /* BirthdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysView.swift; sourceTree = "<group>"; };
 		BEFEAFB9961030106C4AD59C /* OnboardingFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlowView.swift; sourceTree = "<group>"; };
+		C3C69D05C5B4E8782E140BD9 /* Yuvomi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Yuvomi.entitlements; sourceTree = "<group>"; };
 		C57F2CBB2DBF91D45FAE5B8A /* ResponseCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCache.swift; sourceTree = "<group>"; };
 		C6F1CF2B8E4D65DB0E56875F /* AuthLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLogger.swift; sourceTree = "<group>"; };
 		CE7AD807E3F61E7A642569B2 /* BudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewModel.swift; sourceTree = "<group>"; };
@@ -181,12 +190,14 @@
 		D94D34329DE48711F0764748 /* KitchenModelDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenModelDecodingTests.swift; sourceTree = "<group>"; };
 		DA8BBD533E1485EA8A05BADA /* ServerURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerURL.swift; sourceTree = "<group>"; };
 		DCA4360B4E03A5CEDC2AD153 /* Yuvomi.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Yuvomi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E03BEB344CEE003775211029 /* HealthKitImportPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitImportPreferences.swift; sourceTree = "<group>"; };
 		E2E6C2840A7BF012265C3216 /* DashboardSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSnapshot.swift; sourceTree = "<group>"; };
 		E361B5DD87CB8D62F3C0EC6F /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
 		E5FE46C38B6D30BAF6C3DC8F /* DocumentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsView.swift; sourceTree = "<group>"; };
 		F0B3BEA4153EC9E3E09E2771 /* PantryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryView.swift; sourceTree = "<group>"; };
 		F1EC4B754D84B48F55DB48BB /* LiveAPIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveAPIIntegrationTests.swift; sourceTree = "<group>"; };
 		F42E3FD4E63353A2D753BB1A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FF788D57CC4EDAA430B2DAC8 /* HealthKitMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitMapping.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -256,6 +267,7 @@
 		454AC5DE3C063A41C0271CA1 /* Health */ = {
 			isa = PBXGroup;
 			children = (
+				B60B4594874E99C38B976F5F /* HealthKitImportView.swift */,
 				8B012B7F1FCCFE93FE91CB1C /* HealthView.swift */,
 			);
 			path = Health;
@@ -367,6 +379,7 @@
 			children = (
 				E9EDA42D032C3845E121F98A /* Auth */,
 				31EE6C074D089D8D150BF2EC /* Cache */,
+				993D93C6A5FAF59C7D6B47D6 /* HealthKit */,
 				5DA6E548A0EEC15F4FDAF769 /* Models */,
 				ADA7FEE1AD0A7627AE4D3336 /* Networking */,
 				ADB73C2CDCA5CEE8FE8692C1 /* Notifications */,
@@ -418,6 +431,7 @@
 				BBA3E0A2F3B9328F54F18C9C /* DesignSystem */,
 				68A3A77247408D672919EF17 /* Features */,
 				810E8D767D848F58D60E1305 /* Info.plist */,
+				C3C69D05C5B4E8782E140BD9 /* Yuvomi.entitlements */,
 			);
 			path = Yuvomi;
 			sourceTree = "<group>";
@@ -445,6 +459,16 @@
 				E5FE46C38B6D30BAF6C3DC8F /* DocumentsView.swift */,
 			);
 			path = Documents;
+			sourceTree = "<group>";
+		};
+		993D93C6A5FAF59C7D6B47D6 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				5BF45002BCF9A4C56F91FB8A /* HealthKitImporter.swift */,
+				E03BEB344CEE003775211029 /* HealthKitImportPreferences.swift */,
+				FF788D57CC4EDAA430B2DAC8 /* HealthKitMapping.swift */,
+			);
+			path = HealthKit;
 			sourceTree = "<group>";
 		};
 		ADA7FEE1AD0A7627AE4D3336 /* Networking */ = {
@@ -482,6 +506,7 @@
 				A82EF6F9CAB71D0A47F851A8 /* AuthSessionStoreTests.swift */,
 				8148200846C7C649D71FB57A /* DashboardSearchDecodingTests.swift */,
 				1EFEB7AB6D09BA2E0878D0C0 /* DocumentUploadEncodingTests.swift */,
+				99AB409F75FBAEED6F16EE71 /* HealthKitMappingTests.swift */,
 				1B4BA38C496D1398866E0153 /* HTTPClientAuthTests.swift */,
 				D94D34329DE48711F0764748 /* KitchenModelDecodingTests.swift */,
 				F1EC4B754D84B48F55DB48BB /* LiveAPIIntegrationTests.swift */,
@@ -654,6 +679,10 @@
 				603C2D4C93888AF68F55909C /* FamilyView.swift in Sources */,
 				DA122FFC251A1F42A90B6DEC /* FileSecretStore.swift in Sources */,
 				3E3AB35BC42B2B59476D67A8 /* HTTPClient.swift in Sources */,
+				387EB02D5C6AD73EE1C699AA /* HealthKitImportPreferences.swift in Sources */,
+				7C6EE628546395DFCB739820 /* HealthKitImportView.swift in Sources */,
+				5ECD91C12B742D8EF4C9E816 /* HealthKitImporter.swift in Sources */,
+				506D8BA73F6A7BE6A1D682B6 /* HealthKitMapping.swift in Sources */,
 				42B20A8701EB3136D3B7A169 /* HealthView.swift in Sources */,
 				C6C3F66ECE1F1DCBE5AD0131 /* HousekeepingView.swift in Sources */,
 				5C136E548F5C7736A88E520A /* InvitesView.swift in Sources */,
@@ -710,6 +739,7 @@
 				E5D29AE04962B68BC15C4F74 /* DashboardSearchDecodingTests.swift in Sources */,
 				1656F621170937FD5A3FCA84 /* DocumentUploadEncodingTests.swift in Sources */,
 				7470969E71F7304EA46D3609 /* HTTPClientAuthTests.swift in Sources */,
+				2ADA53E086C9A7299B000068 /* HealthKitMappingTests.swift in Sources */,
 				8756D880BE2109FB8AFBF2E5 /* KitchenModelDecodingTests.swift in Sources */,
 				656390B31502FBC67EF61594 /* LiveAPIIntegrationTests.swift in Sources */,
 				A7D97FC46B336CDD73009182 /* ModuleKindTests.swift in Sources */,
@@ -755,6 +785,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Yuvomi/Yuvomi.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -762,6 +793,8 @@
 				INFOPLIST_FILE = Yuvomi/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Yuvomi;
 				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Yuvomi can import your vitals (such as weight, blood pressure, and glucose) from Apple Health into your private health profile on your self-hosted server.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Yuvomi does not write to Apple Health by default; this permission is reserved if you later enable export.";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Yuvomi can reach your self-hosted server on the local network.";
 				INFOPLIST_KEY_NSUserNotificationsUsageDescription = "Yuvomi schedules local reminders for tasks and calendar events from your server.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -906,6 +939,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Yuvomi/Yuvomi.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -913,6 +947,8 @@
 				INFOPLIST_FILE = Yuvomi/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Yuvomi;
 				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Yuvomi can import your vitals (such as weight, blood pressure, and glucose) from Apple Health into your private health profile on your self-hosted server.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Yuvomi does not write to Apple Health by default; this permission is reserved if you later enable export.";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Yuvomi can reach your self-hosted server on the local network.";
 				INFOPLIST_KEY_NSUserNotificationsUsageDescription = "Yuvomi schedules local reminders for tasks and calendar events from your server.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

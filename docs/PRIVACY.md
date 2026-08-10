@@ -26,6 +26,10 @@ All of that data is sent only to the **base URL you configure**. The App does no
 
 If you allow notifications, the App schedules **local notifications** on this device for pending reminders fetched from your server. No Apple Push Notification service (APNs) relay is required for that feature.
 
+## Apple Health (HealthKit)
+
+If you opt in, the App can **read** selected vital types from Apple Health on this device (for example weight, blood pressure, glucose, SpO₂, heart rate) and upload them to **your** Yuvomi server as private health vitals for the signed-in member. The App does not sell Health data. You can revoke access in iOS Settings → Health → Data Access & Devices.
+
 ## Account deletion
 
 Accounts and household data live on **your Yuvomi server**. Use the web app (or server admin tools) to remove members or wipe data. Signing out of the iOS app clears local credentials and cache on this device.

@@ -72,6 +72,16 @@ struct HealthView: View {
         Group {
             if let vm = holder.model {
                 List {
+                    Section {
+                        NavigationLink {
+                            HealthKitImportView()
+                        } label: {
+                            Label("Import from Apple Health", systemImage: "heart.text.square.fill")
+                        }
+                    } footer: {
+                        Text("Optional one-way import into your private Yuvomi health profile.")
+                    }
+
                     if let error = vm.errorMessage {
                         Section { Text(error).foregroundStyle(.red).font(.footnote) }
                     }
@@ -79,7 +89,7 @@ struct HealthView: View {
                         ContentUnavailableView(
                             "No vitals yet",
                             systemImage: "heart",
-                            description: Text("Log weight, BP, and more. Data stays on your server.")
+                            description: Text("Log weight, BP, and more — or import from Apple Health. Data stays on your server.")
                         )
                     } else {
                         ForEach(vm.vitals) { vital in

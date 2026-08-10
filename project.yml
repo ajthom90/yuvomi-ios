@@ -29,8 +29,12 @@ targets:
         INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking: YES
         INFOPLIST_KEY_NSLocalNetworkUsageDescription: "Yuvomi can reach your self-hosted server on the local network."
         INFOPLIST_KEY_NSUserNotificationsUsageDescription: "Yuvomi schedules local reminders for tasks and calendar events from your server."
+        INFOPLIST_KEY_NSHealthShareUsageDescription: "Yuvomi can import your vitals (such as weight, blood pressure, and glucose) from Apple Health into your private health profile on your self-hosted server."
+        INFOPLIST_KEY_NSHealthUpdateUsageDescription: "Yuvomi does not write to Apple Health by default; this permission is reserved if you later enable export."
         CODE_SIGN_STYLE: Automatic
         DEVELOPMENT_TEAM: ""
+    entitlements:
+      path: Yuvomi/Yuvomi.entitlements
     info:
       path: Yuvomi/Info.plist
       properties:

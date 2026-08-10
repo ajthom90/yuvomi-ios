@@ -22,6 +22,7 @@ Point the app at **your** server. There is no vendor cloud, no account with us, 
 | **5 — Records & ops** | Notes, Documents list, Housekeeping dashboard, Reminders | **Shipped** |
 | **6 — Polish** | Rich dashboard, global search, admin invites | **Shipped (core)** |
 | **7 — Store prep** | Document upload/download, local reminder notifications, privacy policy | **Shipped** |
+| **8 — HealthKit** | Opt-in one-way vitals import (private) | **Shipped** |
 
 Design: [`docs/superpowers/specs/2026-08-10-yuvomi-ios-design.md`](docs/superpowers/specs/2026-08-10-yuvomi-ios-design.md)  
 Phase 0 plan: [`docs/superpowers/plans/2026-08-10-yuvomi-ios-phase0.md`](docs/superpowers/plans/2026-08-10-yuvomi-ios-phase0.md)

@@ -33,6 +33,11 @@ struct SettingsView: View {
                 } label: {
                     Label("Search", systemImage: "magnifyingglass")
                 }
+                NavigationLink {
+                    HealthKitImportView()
+                } label: {
+                    Label("Apple Health import", systemImage: "heart.text.square")
+                }
                 if authStore.currentUser?.isAdmin == true || authStore.profile?.method == .apiToken {
                     NavigationLink {
                         InvitesView()

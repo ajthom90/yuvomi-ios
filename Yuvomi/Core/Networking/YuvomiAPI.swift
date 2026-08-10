@@ -554,7 +554,15 @@ struct YuvomiAPI {
         return try await client.send(request, as: APIList<HealthVital>.self).data
     }
 
-    func createVital(type: String, valueNum: Double, valueNum2: Double?, unit: String?, measuredAt: String) async throws -> HealthVital {
+    func createVital(
+        type: String,
+        valueNum: Double,
+        valueNum2: Double?,
+        unit: String?,
+        measuredAt: String,
+        visibility: String = "private",
+        note: String? = nil
+    ) async throws -> HealthVital {
         var request = URLRequest(url: server.apiURL(path: "/health/vitals"))
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -562,9 +570,11 @@ struct YuvomiAPI {
             "type": type,
             "value_num": valueNum,
             "measured_at": measuredAt,
+            "visibility": visibility,
         ]
         if let valueNum2 { body["value_num2"] = valueNum2 }
         if let unit, !unit.isEmpty { body["unit"] = unit }
+        if let note, !note.isEmpty { body["note"] = note }
         request.httpBody = try JSONSerialization.data(withJSONObject: body)
         return try await client.send(request, as: APIData<HealthVital>.self).data
     }
