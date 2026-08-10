@@ -1,0 +1,59 @@
+name: Yuvomi
+options:
+  bundleIdPrefix: cloud.yuvomi
+  deploymentTarget:
+    iOS: "18.0"
+  createIntermediateGroups: true
+  developmentLanguage: en
+  groupSortPosition: top
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    TARGETED_DEVICE_FAMILY: "1,2"
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  Yuvomi:
+    type: application
+    platform: iOS
+    sources:
+      - path: Yuvomi
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: cloud.yuvomi.ios
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Yuvomi
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking: YES
+        INFOPLIST_KEY_NSLocalNetworkUsageDescription: "Yuvomi can reach your self-hosted server on the local network."
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+    info:
+      path: Yuvomi/Info.plist
+      properties:
+        CFBundleURLTypes:
+          - CFBundleURLName: cloud.yuvomi.ios
+            CFBundleURLSchemes:
+              - yuvomi
+  YuvomiTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: YuvomiTests
+    dependencies:
+      - target: Yuvomi
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: cloud.yuvomi.ios.tests
+        GENERATE_INFOPLIST_FILE: YES
+schemes:
+  Yuvomi:
+    build:
+      targets:
+        Yuvomi: all
+        YuvomiTests: [test]
+    test:
+      targets:
+        - YuvomiTests

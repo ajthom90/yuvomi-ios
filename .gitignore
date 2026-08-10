@@ -1,0 +1,48 @@
+# Xcode
+DerivedData/
+build/
+*.xcuserstate
+*.xcuserdata/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+timeline.xctimeline
+playground.xcworkspace
+
+# Generated project (optional — we commit for convenience without XcodeGen on clone)
+# Uncomment if you prefer generate-on-clone only:
+# Yuvomi.xcodeproj/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Packages/
+Package.resolved
+
+# CocoaPods / Carthage
+Pods/
+Carthage/Build/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Secrets & signing
+*.mobileprovision
+*.p12
+*.cer
+.env
+.env.*
+Secrets.xcconfig
+**/AuthKey_*.p8
+
+# IDE
+.idea/
+*.swp
+*~
+
+# Testing
+*.xcresult
+coverage/

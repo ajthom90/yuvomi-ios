@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    name: Build & Test
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Resolve simulator destination
+        id: dest
+        run: |
+          set -euo pipefail
+          # Prefer a modern iPhone simulator; fall back to the first available iPhone.
+          DEST=$(xcodebuild -scheme Yuvomi -showdestinations 2>/dev/null \
+            | grep -E 'platform:iOS Simulator' \
+            | grep -E 'name:iPhone' \
+            | head -1 \
+            | sed -E 's/.*platform:([^,}]+).*id:([^,}]+).*name:([^}]+).*/platform=\1,id=\2/' \
+            || true)
+          if [ -z "${DEST}" ]; then
+            DEST="platform=iOS Simulator,name=iPhone 16"
+          fi
+          echo "destination=$DEST" >> "$GITHUB_OUTPUT"
+          echo "Using: $DEST"
+
+      - name: Test
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -scheme Yuvomi \
+            -destination "${{ steps.dest.outputs.destination }}" \
+            test \
+            CODE_SIGNING_ALLOWED=NO

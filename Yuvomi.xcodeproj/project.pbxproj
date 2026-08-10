@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0197EA20B779A40DFEA03226 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087DE2834948E92DD79EA67 /* AppDependencies.swift */; };
+		0673CA2316E0C50E8E9648D0 /* ModulePlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B35275745508637C2AE9737 /* ModulePlaceholderView.swift */; };
+		18409E622F73655595BEE13F /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B602886D6259CE85C8DFCCCF /* MainTabView.swift */; };
+		1FE8F196523469D65D196199 /* ServerURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B60DD2927E75DA6962900A /* ServerURLView.swift */; };
+		273213F51D6D432B2ACA668A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D86A1F7B386ACB2CC0EB5 /* SettingsView.swift */; };
+		34C552D7DC4B4B0C8B963CA6 /* ServerURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80820632A8D6F4572E82A99 /* ServerURLTests.swift */; };
+		3E3AB35BC42B2B59476D67A8 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DF1758566388F9F9076DD /* HTTPClient.swift */; };
+		481DC5BA826E189B5CA9DF46 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4651670B50B67BFF2EF525 /* DashboardViewModel.swift */; };
+		67E11B739E790E8B0783DE88 /* YuvomiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2B45D3CD7DE23ECEA85C2 /* YuvomiApp.swift */; };
+		7470969E71F7304EA46D3609 /* HTTPClientAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4BA38C496D1398866E0153 /* HTTPClientAuthTests.swift */; };
+		77884C32F6708452F032FC4A /* ResponseCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042514348C5BC28AB2ABD314 /* ResponseCacheTests.swift */; };
+		8A303201D63A10343BD77268 /* AuthSessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8464E9B7470860C56DC6BB6 /* AuthSessionStore.swift */; };
+		8FDDCBEAB2F78AC6338C0C61 /* YuvomiColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73351EE428D3DB05C66F2958 /* YuvomiColors.swift */; };
+		910228F29A95A2AC9C2368DC /* ResponseCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F2CBB2DBF91D45FAE5B8A /* ResponseCache.swift */; };
+		9219FAE26D6035A5D39E0AE3 /* YuvomiAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B24AFEC0B32C3CEEE88B268 /* YuvomiAPI.swift */; };
+		963C3C86F5AAA4A0020E1EF6 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600D4BEB166C952DB6A988A /* APIError.swift */; };
+		9C4868624A5521927B25406A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F8D3011346F14DD81CB0F5 /* LoginView.swift */; };
+		A042D5CD5976CEC003DFFA79 /* ServerURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8BBD533E1485EA8A05BADA /* ServerURL.swift */; };
+		A2A23D31FD8BEFD1B46CAF29 /* AuthHeaderProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E89223BEE46688DD7A45BF /* AuthHeaderProviding.swift */; };
+		A6D3AF80FC3D0AB4C820F1F6 /* ModuleKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEE790700E98D899EFBF090 /* ModuleKind.swift */; };
+		A7D97FC46B336CDD73009182 /* ModuleKindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F6EF5AC883AAAE573D1FF0 /* ModuleKindTests.swift */; };
+		BB4D9532EBF3DD33CC7E908D /* AuthSessionStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82EF6F9CAB71D0A47F851A8 /* AuthSessionStoreTests.swift */; };
+		BC3079FFDF6DEC15C453CF42 /* AuthCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951950924BBF561D4DEBD8C1 /* AuthCredentials.swift */; };
+		BFFC9D70FC38F30DA037C357 /* VersionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4465EB39E7B62739F9D60451 /* VersionInfo.swift */; };
+		CDE70D7FF6B6C4B154E22CCD /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A01C3AB477A222987E889 /* WelcomeView.swift */; };
+		D15B0518BC05CEFFEEB97BFB /* OnboardingFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFEAFB9961030106C4AD59C /* OnboardingFlowView.swift */; };
+		D4B125FC354884BEC8C3BCE8 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D94936C79143238804FB9 /* KeychainStore.swift */; };
+		E32BA73D5324DEA924666D8A /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB15C03EAF35B5E5B38B286 /* DashboardView.swift */; };
+		E441AF34962FDA0731B7331B /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7D6068A61B454A8A8D9A3 /* AppRootView.swift */; };
+		E7AC9E74430DDC4289F2AD4A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42E3FD4E63353A2D753BB1A /* User.swift */; };
+		EE67B11AE42EFF22C82114E7 /* DashboardSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E6C2840A7BF012265C3216 /* DashboardSnapshot.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E4827491387E011D1916F80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 173697F87CE281E563EB4E19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C97AC20011A1421F972524E;
+			remoteInfo = Yuvomi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		042514348C5BC28AB2ABD314 /* ResponseCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCacheTests.swift; sourceTree = "<group>"; };
+		1B4BA38C496D1398866E0153 /* HTTPClientAuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientAuthTests.swift; sourceTree = "<group>"; };
+		20F6EF5AC883AAAE573D1FF0 /* ModuleKindTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleKindTests.swift; sourceTree = "<group>"; };
+		2600D4BEB166C952DB6A988A /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		2AB15C03EAF35B5E5B38B286 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		2D7D86A1F7B386ACB2CC0EB5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3AD2B45D3CD7DE23ECEA85C2 /* YuvomiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuvomiApp.swift; sourceTree = "<group>"; };
+		4087DE2834948E92DD79EA67 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		4465EB39E7B62739F9D60451 /* VersionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionInfo.swift; sourceTree = "<group>"; };
+		4F8A01C3AB477A222987E889 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		55F8D3011346F14DD81CB0F5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5AEE790700E98D899EFBF090 /* ModuleKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleKind.swift; sourceTree = "<group>"; };
+		5B35275745508637C2AE9737 /* ModulePlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulePlaceholderView.swift; sourceTree = "<group>"; };
+		5F4651670B50B67BFF2EF525 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		6B24AFEC0B32C3CEEE88B268 /* YuvomiAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuvomiAPI.swift; sourceTree = "<group>"; };
+		73351EE428D3DB05C66F2958 /* YuvomiColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuvomiColors.swift; sourceTree = "<group>"; };
+		78C7D6068A61B454A8A8D9A3 /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
+		7F9D94936C79143238804FB9 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		810E8D767D848F58D60E1305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8E2DF1758566388F9F9076DD /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		951950924BBF561D4DEBD8C1 /* AuthCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCredentials.swift; sourceTree = "<group>"; };
+		A4A0954C8094751F769189FF /* YuvomiTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = YuvomiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A82EF6F9CAB71D0A47F851A8 /* AuthSessionStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSessionStoreTests.swift; sourceTree = "<group>"; };
+		B602886D6259CE85C8DFCCCF /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		B80820632A8D6F4572E82A99 /* ServerURLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerURLTests.swift; sourceTree = "<group>"; };
+		B8464E9B7470860C56DC6BB6 /* AuthSessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSessionStore.swift; sourceTree = "<group>"; };
+		BEFEAFB9961030106C4AD59C /* OnboardingFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlowView.swift; sourceTree = "<group>"; };
+		C57F2CBB2DBF91D45FAE5B8A /* ResponseCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCache.swift; sourceTree = "<group>"; };
+		D2E89223BEE46688DD7A45BF /* AuthHeaderProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderProviding.swift; sourceTree = "<group>"; };
+		D4B60DD2927E75DA6962900A /* ServerURLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerURLView.swift; sourceTree = "<group>"; };
+		DA8BBD533E1485EA8A05BADA /* ServerURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerURL.swift; sourceTree = "<group>"; };
+		DCA4360B4E03A5CEDC2AD153 /* Yuvomi.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Yuvomi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2E6C2840A7BF012265C3216 /* DashboardSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSnapshot.swift; sourceTree = "<group>"; };
+		F42E3FD4E63353A2D753BB1A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1AE73AE4B1226001C158D700 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				55F8D3011346F14DD81CB0F5 /* LoginView.swift */,
+				BEFEAFB9961030106C4AD59C /* OnboardingFlowView.swift */,
+				D4B60DD2927E75DA6962900A /* ServerURLView.swift */,
+				4F8A01C3AB477A222987E889 /* WelcomeView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		1F62916A587BF56B64DB2546 /* AppShell */ = {
+			isa = PBXGroup;
+			children = (
+				B602886D6259CE85C8DFCCCF /* MainTabView.swift */,
+				5B35275745508637C2AE9737 /* ModulePlaceholderView.swift */,
+			);
+			path = AppShell;
+			sourceTree = "<group>";
+		};
+		31EE6C074D089D8D150BF2EC /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				C57F2CBB2DBF91D45FAE5B8A /* ResponseCache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		355D1C97A82BE39F02E60862 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				2AB15C03EAF35B5E5B38B286 /* DashboardView.swift */,
+				5F4651670B50B67BFF2EF525 /* DashboardViewModel.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		48A6FD5910C19B886F1B48D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCA4360B4E03A5CEDC2AD153 /* Yuvomi.app */,
+				A4A0954C8094751F769189FF /* YuvomiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C615597BDD76810C434DD0E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4087DE2834948E92DD79EA67 /* AppDependencies.swift */,
+				78C7D6068A61B454A8A8D9A3 /* AppRootView.swift */,
+				3AD2B45D3CD7DE23ECEA85C2 /* YuvomiApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5DA6E548A0EEC15F4FDAF769 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2600D4BEB166C952DB6A988A /* APIError.swift */,
+				E2E6C2840A7BF012265C3216 /* DashboardSnapshot.swift */,
+				F42E3FD4E63353A2D753BB1A /* User.swift */,
+				4465EB39E7B62739F9D60451 /* VersionInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		68A3A77247408D672919EF17 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				355D1C97A82BE39F02E60862 /* Dashboard */,
+				1AE73AE4B1226001C158D700 /* Onboarding */,
+				7F670FA0EF119BD027AFEC1B /* Settings */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		70C1203E9416C670A9994007 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E9EDA42D032C3845E121F98A /* Auth */,
+				31EE6C074D089D8D150BF2EC /* Cache */,
+				5DA6E548A0EEC15F4FDAF769 /* Models */,
+				ADA7FEE1AD0A7627AE4D3336 /* Networking */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7F670FA0EF119BD027AFEC1B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2D7D86A1F7B386ACB2CC0EB5 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7F7819A5A5341F4BD1DF6410 = {
+			isa = PBXGroup;
+			children = (
+				84EFD039CB4FBE782CEF072B /* Yuvomi */,
+				B5B9BC7DAFA0DAAA043F6433 /* YuvomiTests */,
+				48A6FD5910C19B886F1B48D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84EFD039CB4FBE782CEF072B /* Yuvomi */ = {
+			isa = PBXGroup;
+			children = (
+				5C615597BDD76810C434DD0E /* App */,
+				1F62916A587BF56B64DB2546 /* AppShell */,
+				70C1203E9416C670A9994007 /* Core */,
+				BBA3E0A2F3B9328F54F18C9C /* DesignSystem */,
+				68A3A77247408D672919EF17 /* Features */,
+				810E8D767D848F58D60E1305 /* Info.plist */,
+			);
+			path = Yuvomi;
+			sourceTree = "<group>";
+		};
+		ADA7FEE1AD0A7627AE4D3336 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D2E89223BEE46688DD7A45BF /* AuthHeaderProviding.swift */,
+				8E2DF1758566388F9F9076DD /* HTTPClient.swift */,
+				DA8BBD533E1485EA8A05BADA /* ServerURL.swift */,
+				6B24AFEC0B32C3CEEE88B268 /* YuvomiAPI.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B5B9BC7DAFA0DAAA043F6433 /* YuvomiTests */ = {
+			isa = PBXGroup;
+			children = (
+				A82EF6F9CAB71D0A47F851A8 /* AuthSessionStoreTests.swift */,
+				1B4BA38C496D1398866E0153 /* HTTPClientAuthTests.swift */,
+				20F6EF5AC883AAAE573D1FF0 /* ModuleKindTests.swift */,
+				042514348C5BC28AB2ABD314 /* ResponseCacheTests.swift */,
+				B80820632A8D6F4572E82A99 /* ServerURLTests.swift */,
+			);
+			path = YuvomiTests;
+			sourceTree = "<group>";
+		};
+		BBA3E0A2F3B9328F54F18C9C /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				5AEE790700E98D899EFBF090 /* ModuleKind.swift */,
+				73351EE428D3DB05C66F2958 /* YuvomiColors.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		E9EDA42D032C3845E121F98A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				951950924BBF561D4DEBD8C1 /* AuthCredentials.swift */,
+				B8464E9B7470860C56DC6BB6 /* AuthSessionStore.swift */,
+				7F9D94936C79143238804FB9 /* KeychainStore.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E9BDAA7FB75916A966F84E7 /* YuvomiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27EB41EC3DEB1364C7C22809 /* Build configuration list for PBXNativeTarget "YuvomiTests" */;
+			buildPhases = (
+				E5E34758F0118D4DDE28E6CB /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D83740F27345DE88D54A0FC /* PBXTargetDependency */,
+			);
+			name = YuvomiTests;
+			packageProductDependencies = (
+			);
+			productName = YuvomiTests;
+			productReference = A4A0954C8094751F769189FF /* YuvomiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3C97AC20011A1421F972524E /* Yuvomi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55895D12D7884D39C344EE0F /* Build configuration list for PBXNativeTarget "Yuvomi" */;
+			buildPhases = (
+				9D1195CD357360008A1D4A57 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yuvomi;
+			packageProductDependencies = (
+			);
+			productName = Yuvomi;
+			productReference = DCA4360B4E03A5CEDC2AD153 /* Yuvomi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		173697F87CE281E563EB4E19 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					3C97AC20011A1421F972524E = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 02C7AFFC5618D85602ECD763 /* Build configuration list for PBXProject "Yuvomi" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7F7819A5A5341F4BD1DF6410;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 48A6FD5910C19B886F1B48D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C97AC20011A1421F972524E /* Yuvomi */,
+				2E9BDAA7FB75916A966F84E7 /* YuvomiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D1195CD357360008A1D4A57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				963C3C86F5AAA4A0020E1EF6 /* APIError.swift in Sources */,
+				0197EA20B779A40DFEA03226 /* AppDependencies.swift in Sources */,
+				E441AF34962FDA0731B7331B /* AppRootView.swift in Sources */,
+				BC3079FFDF6DEC15C453CF42 /* AuthCredentials.swift in Sources */,
+				A2A23D31FD8BEFD1B46CAF29 /* AuthHeaderProviding.swift in Sources */,
+				8A303201D63A10343BD77268 /* AuthSessionStore.swift in Sources */,
+				EE67B11AE42EFF22C82114E7 /* DashboardSnapshot.swift in Sources */,
+				E32BA73D5324DEA924666D8A /* DashboardView.swift in Sources */,
+				481DC5BA826E189B5CA9DF46 /* DashboardViewModel.swift in Sources */,
+				3E3AB35BC42B2B59476D67A8 /* HTTPClient.swift in Sources */,
+				D4B125FC354884BEC8C3BCE8 /* KeychainStore.swift in Sources */,
+				9C4868624A5521927B25406A /* LoginView.swift in Sources */,
+				18409E622F73655595BEE13F /* MainTabView.swift in Sources */,
+				A6D3AF80FC3D0AB4C820F1F6 /* ModuleKind.swift in Sources */,
+				0673CA2316E0C50E8E9648D0 /* ModulePlaceholderView.swift in Sources */,
+				D15B0518BC05CEFFEEB97BFB /* OnboardingFlowView.swift in Sources */,
+				910228F29A95A2AC9C2368DC /* ResponseCache.swift in Sources */,
+				A042D5CD5976CEC003DFFA79 /* ServerURL.swift in Sources */,
+				1FE8F196523469D65D196199 /* ServerURLView.swift in Sources */,
+				273213F51D6D432B2ACA668A /* SettingsView.swift in Sources */,
+				E7AC9E74430DDC4289F2AD4A /* User.swift in Sources */,
+				BFFC9D70FC38F30DA037C357 /* VersionInfo.swift in Sources */,
+				CDE70D7FF6B6C4B154E22CCD /* WelcomeView.swift in Sources */,
+				9219FAE26D6035A5D39E0AE3 /* YuvomiAPI.swift in Sources */,
+				67E11B739E790E8B0783DE88 /* YuvomiApp.swift in Sources */,
+				8FDDCBEAB2F78AC6338C0C61 /* YuvomiColors.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5E34758F0118D4DDE28E6CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB4D9532EBF3DD33CC7E908D /* AuthSessionStoreTests.swift in Sources */,
+				7470969E71F7304EA46D3609 /* HTTPClientAuthTests.swift in Sources */,
+				A7D97FC46B336CDD73009182 /* ModuleKindTests.swift in Sources */,
+				77884C32F6708452F032FC4A /* ResponseCacheTests.swift in Sources */,
+				34C552D7DC4B4B0C8B963CA6 /* ServerURLTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D83740F27345DE88D54A0FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C97AC20011A1421F972524E /* Yuvomi */;
+			targetProxy = 7E4827491387E011D1916F80 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		018B686AD6870AF344323800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.yuvomi.ios.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yuvomi.app/Yuvomi";
+			};
+			name = Release;
+		};
+		24E048FA56A360C36E8B233A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Yuvomi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Yuvomi;
+				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Yuvomi can reach your self-hosted server on the local network.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.yuvomi.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4099F258C71FA5C41C41C57E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4867954F96C00789E2FC21AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		689116FDDBB068FCEDE175B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Yuvomi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Yuvomi;
+				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Yuvomi can reach your self-hosted server on the local network.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.yuvomi.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B723DD5C067E7BB959E06696 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cloud.yuvomi.ios.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yuvomi.app/Yuvomi";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02C7AFFC5618D85602ECD763 /* Build configuration list for PBXProject "Yuvomi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4867954F96C00789E2FC21AC /* Debug */,
+				4099F258C71FA5C41C41C57E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		27EB41EC3DEB1364C7C22809 /* Build configuration list for PBXNativeTarget "YuvomiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B723DD5C067E7BB959E06696 /* Debug */,
+				018B686AD6870AF344323800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		55895D12D7884D39C344EE0F /* Build configuration list for PBXNativeTarget "Yuvomi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24E048FA56A360C36E8B233A /* Debug */,
+				689116FDDBB068FCEDE175B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 173697F87CE281E563EB4E19 /* Project object */;
+}
