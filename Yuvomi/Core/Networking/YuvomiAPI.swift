@@ -553,4 +553,97 @@ struct YuvomiAPI {
         ])
         return try await client.send(request, as: APIData<RewardCatalogItem>.self).data
     }
+
+    // MARK: - Notes
+
+    func fetchNotes() async throws -> [Note] {
+        var request = URLRequest(url: server.apiURL(path: "/notes"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIList<Note>.self).data
+    }
+
+    func createNote(title: String?, content: String, color: String = "#FFEB3B") async throws -> Note {
+        var request = URLRequest(url: server.apiURL(path: "/notes"))
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        var body: [String: Any] = ["content": content, "color": color]
+        if let title, !title.isEmpty { body["title"] = title }
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
+        return try await client.send(request, as: APIData<Note>.self).data
+    }
+
+    func updateNote(id: Int, title: String?, content: String, color: String?) async throws -> Note {
+        var request = URLRequest(url: server.apiURL(path: "/notes/\(id)"))
+        request.httpMethod = "PUT"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        var body: [String: Any] = ["content": content]
+        if let title { body["title"] = title }
+        if let color { body["color"] = color }
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
+        return try await client.send(request, as: APIData<Note>.self).data
+    }
+
+    func toggleNotePin(id: Int) async throws {
+        var request = URLRequest(url: server.apiURL(path: "/notes/\(id)/pin"))
+        request.httpMethod = "PATCH"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = Data("{}".utf8)
+        try await client.sendVoid(request)
+    }
+
+    func deleteNote(id: Int) async throws {
+        var request = URLRequest(url: server.apiURL(path: "/notes/\(id)"))
+        request.httpMethod = "DELETE"
+        try await client.sendVoid(request)
+    }
+
+    // MARK: - Documents
+
+    func fetchDocuments() async throws -> [FamilyDocument] {
+        var request = URLRequest(url: server.apiURL(path: "/documents"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIList<FamilyDocument>.self).data
+    }
+
+    func deleteDocument(id: Int) async throws {
+        var request = URLRequest(url: server.apiURL(path: "/documents/\(id)"))
+        request.httpMethod = "DELETE"
+        try await client.sendVoid(request)
+    }
+
+    // MARK: - Housekeeping
+
+    func fetchHousekeepingDashboard() async throws -> HousekeepingDashboard {
+        var request = URLRequest(url: server.apiURL(path: "/housekeeping/dashboard"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIData<HousekeepingDashboard>.self).data
+    }
+
+    // MARK: - Reminders
+
+    func fetchPendingReminders() async throws -> [ReminderItem] {
+        var request = URLRequest(url: server.apiURL(path: "/reminders/pending"))
+        request.httpMethod = "GET"
+        return try await client.send(request, as: APIList<ReminderItem>.self).data
+    }
+
+    func dismissReminder(id: Int) async throws {
+        var request = URLRequest(url: server.apiURL(path: "/reminders/\(id)/dismiss"))
+        request.httpMethod = "PATCH"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = Data("{}".utf8)
+        try await client.sendVoid(request)
+    }
+
+    func createReminder(entityType: String, entityId: Int, remindAt: String) async throws -> ReminderItem {
+        var request = URLRequest(url: server.apiURL(path: "/reminders"))
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try JSONSerialization.data(withJSONObject: [
+            "entity_type": entityType,
+            "entity_id": entityId,
+            "remind_at": remindAt,
+        ])
+        return try await client.send(request, as: APIData<ReminderItem>.self).data
+    }
 }

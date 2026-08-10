@@ -100,6 +100,10 @@ struct MoreModulesView: View {
         case .birthdays: BirthdaysView()
         case .health: HealthView()
         case .rewards: RewardsView()
+        case .notes: NotesView()
+        case .documents: DocumentsView()
+        case .housekeeping: HousekeepingView()
+        case .reminders: RemindersView()
         default: ModulePlaceholderView(module: module)
         }
     }

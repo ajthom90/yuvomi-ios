@@ -14,8 +14,10 @@
 		141B3BFF3581E95344AE58B0 /* MoneyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69445ADAF5BDBAFAED5977B /* MoneyModels.swift */; };
 		18409E622F73655595BEE13F /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B602886D6259CE85C8DFCCCF /* MainTabView.swift */; };
 		19082D3CA97DB93610924261 /* BudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7AD807E3F61E7A642569B2 /* BudgetViewModel.swift */; };
+		1F5CFCFB0BA5CCFA5222F426 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC5CC12B229119D3D0D7BF /* NotesView.swift */; };
 		1FE8F196523469D65D196199 /* ServerURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B60DD2927E75DA6962900A /* ServerURLView.swift */; };
 		25DF27BD6F0B1C4349A762DC /* BudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942CCB4EE4236D88F32C4505 /* BudgetView.swift */; };
+		27012AFFD610D5B8F00DAFD1 /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153B13EF4D59B7852546AFA /* RemindersView.swift */; };
 		273213F51D6D432B2ACA668A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D86A1F7B386ACB2CC0EB5 /* SettingsView.swift */; };
 		2E03397F241E2CCA2B4784AD /* CalendarAgendaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11219D34E961FA2FC969A1AE /* CalendarAgendaView.swift */; };
 		34C552D7DC4B4B0C8B963CA6 /* ServerURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80820632A8D6F4572E82A99 /* ServerURLTests.swift */; };
@@ -42,15 +44,18 @@
 		8756D880BE2109FB8AFBF2E5 /* KitchenModelDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94D34329DE48711F0764748 /* KitchenModelDecodingTests.swift */; };
 		899BC7B06DF448159F475FC1 /* APITokenNormalizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD7229DAC4304D4D7D4AB40 /* APITokenNormalizerTests.swift */; };
 		8A303201D63A10343BD77268 /* AuthSessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8464E9B7470860C56DC6BB6 /* AuthSessionStore.swift */; };
+		8CE92AFFACFBAF28B01B6070 /* RecordsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC889AB1C1BBA2CC6CEBC3D /* RecordsModels.swift */; };
 		8FDDCBEAB2F78AC6338C0C61 /* YuvomiColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73351EE428D3DB05C66F2958 /* YuvomiColors.swift */; };
 		910228F29A95A2AC9C2368DC /* ResponseCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F2CBB2DBF91D45FAE5B8A /* ResponseCache.swift */; };
 		912C2934D1F8FE1D50111A9B /* PeopleModelDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13C85B7A359AD5E589333A /* PeopleModelDecodingTests.swift */; };
 		9219FAE26D6035A5D39E0AE3 /* YuvomiAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B24AFEC0B32C3CEEE88B268 /* YuvomiAPI.swift */; };
 		963C3C86F5AAA4A0020E1EF6 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600D4BEB166C952DB6A988A /* APIError.swift */; };
 		97A888A09CA9454502D91AF9 /* AuthLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F1CF2B8E4D65DB0E56875F /* AuthLogger.swift */; };
+		97DCFB86FF0EAF16450E285C /* RecordsModelDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1AB85FA59EC1031063C7DE /* RecordsModelDecodingTests.swift */; };
 		9804D40F6BAF8485A1AD4E08 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B7E44E83DA1236AF208973 /* RewardsView.swift */; };
 		984AD269D0C240B5263A2C79 /* PeopleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F460565376B51F68DFA577 /* PeopleModels.swift */; };
 		9C4868624A5521927B25406A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F8D3011346F14DD81CB0F5 /* LoginView.swift */; };
+		9D010026DF3F5766664E905F /* DocumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FE46C38B6D30BAF6C3DC8F /* DocumentsView.swift */; };
 		9D483AA8C7EBC0C488B68648 /* BirthdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3563A82F7A115990F4ED1F /* BirthdaysView.swift */; };
 		A042D5CD5976CEC003DFFA79 /* ServerURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8BBD533E1485EA8A05BADA /* ServerURL.swift */; };
 		A2A23D31FD8BEFD1B46CAF29 /* AuthHeaderProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E89223BEE46688DD7A45BF /* AuthHeaderProviding.swift */; };
@@ -63,6 +68,7 @@
 		BC3079FFDF6DEC15C453CF42 /* AuthCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951950924BBF561D4DEBD8C1 /* AuthCredentials.swift */; };
 		BFFC9D70FC38F30DA037C357 /* VersionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4465EB39E7B62739F9D60451 /* VersionInfo.swift */; };
 		C3885E7361FC399598DAB80D /* PantryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B3BEA4153EC9E3E09E2771 /* PantryView.swift */; };
+		C6C3F66ECE1F1DCBE5AD0131 /* HousekeepingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A033BFA4E06CC931B021319C /* HousekeepingView.swift */; };
 		CBEE4FF10FCF1116CD7C198B /* SplitExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B065B9F586DA55B9312CA34A /* SplitExpensesView.swift */; };
 		CD386AC7206DDCBD6947173D /* ShoppingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BE9AE12E480061AC0CCFDC /* ShoppingViewModel.swift */; };
 		CDE70D7FF6B6C4B154E22CCD /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A01C3AB477A222987E889 /* WelcomeView.swift */; };
@@ -120,6 +126,7 @@
 		62488EF87258939D4842431A /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
 		64DE1479A5DA04558682B246 /* ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingView.swift; sourceTree = "<group>"; };
 		6B24AFEC0B32C3CEEE88B268 /* YuvomiAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuvomiAPI.swift; sourceTree = "<group>"; };
+		6FC889AB1C1BBA2CC6CEBC3D /* RecordsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsModels.swift; sourceTree = "<group>"; };
 		7321E4D041FC5F46C1F0C503 /* CalendarEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
 		73351EE428D3DB05C66F2958 /* YuvomiColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuvomiColors.swift; sourceTree = "<group>"; };
 		78C7D6068A61B454A8A8D9A3 /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
@@ -132,12 +139,14 @@
 		942CCB4EE4236D88F32C4505 /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
 		951950924BBF561D4DEBD8C1 /* AuthCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCredentials.swift; sourceTree = "<group>"; };
 		9716F8E2056B3A54ED8A4F19 /* PantryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryViewModel.swift; sourceTree = "<group>"; };
+		A033BFA4E06CC931B021319C /* HousekeepingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousekeepingView.swift; sourceTree = "<group>"; };
 		A4A0954C8094751F769189FF /* YuvomiTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = YuvomiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6B7E44E83DA1236AF208973 /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsView.swift; sourceTree = "<group>"; };
 		A742D664277C0D9EB23E1EF6 /* KitchenModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenModels.swift; sourceTree = "<group>"; };
 		A76F05E2322165481506A935 /* ResilientSecretStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResilientSecretStore.swift; sourceTree = "<group>"; };
 		A82851CEE006370292005ECB /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
 		A82EF6F9CAB71D0A47F851A8 /* AuthSessionStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSessionStoreTests.swift; sourceTree = "<group>"; };
+		AB1AB85FA59EC1031063C7DE /* RecordsModelDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsModelDecodingTests.swift; sourceTree = "<group>"; };
 		AB6E03F98E7EC5669D6EF18C /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		AB99197751C8E408CE513AD3 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		AEFF40D2267E72EFDC9ADAD5 /* FamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyView.swift; sourceTree = "<group>"; };
@@ -147,12 +156,14 @@
 		B6B84FC2937DB41E622CE5FE /* FileSecretStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSecretStore.swift; sourceTree = "<group>"; };
 		B80820632A8D6F4572E82A99 /* ServerURLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerURLTests.swift; sourceTree = "<group>"; };
 		B8464E9B7470860C56DC6BB6 /* AuthSessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSessionStore.swift; sourceTree = "<group>"; };
+		BADC5CC12B229119D3D0D7BF /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		BD3563A82F7A115990F4ED1F /* BirthdaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaysView.swift; sourceTree = "<group>"; };
 		BEFEAFB9961030106C4AD59C /* OnboardingFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlowView.swift; sourceTree = "<group>"; };
 		C57F2CBB2DBF91D45FAE5B8A /* ResponseCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCache.swift; sourceTree = "<group>"; };
 		C6F1CF2B8E4D65DB0E56875F /* AuthLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLogger.swift; sourceTree = "<group>"; };
 		CE7AD807E3F61E7A642569B2 /* BudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewModel.swift; sourceTree = "<group>"; };
 		D0F9CD1A126BCCAC2232B2C3 /* JSONHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelpers.swift; sourceTree = "<group>"; };
+		D153B13EF4D59B7852546AFA /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersView.swift; sourceTree = "<group>"; };
 		D2E89223BEE46688DD7A45BF /* AuthHeaderProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderProviding.swift; sourceTree = "<group>"; };
 		D4B60DD2927E75DA6962900A /* ServerURLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerURLView.swift; sourceTree = "<group>"; };
 		D94D34329DE48711F0764748 /* KitchenModelDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenModelDecodingTests.swift; sourceTree = "<group>"; };
@@ -160,6 +171,7 @@
 		DCA4360B4E03A5CEDC2AD153 /* Yuvomi.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Yuvomi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E6C2840A7BF012265C3216 /* DashboardSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSnapshot.swift; sourceTree = "<group>"; };
 		E361B5DD87CB8D62F3C0EC6F /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		E5FE46C38B6D30BAF6C3DC8F /* DocumentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsView.swift; sourceTree = "<group>"; };
 		F0B3BEA4153EC9E3E09E2771 /* PantryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryView.swift; sourceTree = "<group>"; };
 		F1EC4B754D84B48F55DB48BB /* LiveAPIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveAPIIntegrationTests.swift; sourceTree = "<group>"; };
 		F42E3FD4E63353A2D753BB1A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -238,6 +250,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		52410390EBFD32F8D1D5971E /* Housekeeping */ = {
+			isa = PBXGroup;
+			children = (
+				A033BFA4E06CC931B021319C /* HousekeepingView.swift */,
+			);
+			path = Housekeeping;
+			sourceTree = "<group>";
+		};
 		57FE18F56F74390251FCB771 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +287,7 @@
 				A742D664277C0D9EB23E1EF6 /* KitchenModels.swift */,
 				B69445ADAF5BDBAFAED5977B /* MoneyModels.swift */,
 				00F460565376B51F68DFA577 /* PeopleModels.swift */,
+				6FC889AB1C1BBA2CC6CEBC3D /* RecordsModels.swift */,
 				103570698F351595D730250E /* ShoppingModels.swift */,
 				A82851CEE006370292005ECB /* TaskItem.swift */,
 				F42E3FD4E63353A2D753BB1A /* User.swift */,
@@ -284,6 +305,14 @@
 			path = SplitExpenses;
 			sourceTree = "<group>";
 		};
+		66474266890CE65FFA25C1AF /* Reminders */ = {
+			isa = PBXGroup;
+			children = (
+				D153B13EF4D59B7852546AFA /* RemindersView.swift */,
+			);
+			path = Reminders;
+			sourceTree = "<group>";
+		};
 		68A3A77247408D672919EF17 /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,12 +321,16 @@
 				57FE18F56F74390251FCB771 /* Calendar */,
 				FCC2E61491FAFCC4C9E6CC97 /* Contacts */,
 				355D1C97A82BE39F02E60862 /* Dashboard */,
+				8A130843E5815BD41B72FDA6 /* Documents */,
 				C096847C028C75F72D4BC603 /* Family */,
 				454AC5DE3C063A41C0271CA1 /* Health */,
+				52410390EBFD32F8D1D5971E /* Housekeeping */,
 				2745B3571BF8701F7664B128 /* Meals */,
+				85792168460A1969DAA373EC /* Notes */,
 				1AE73AE4B1226001C158D700 /* Onboarding */,
 				7F4A5B0F1EF1B99D1780AF94 /* Pantry */,
 				B2D694693CF136AC6C1E49CF /* Recipes */,
+				66474266890CE65FFA25C1AF /* Reminders */,
 				FCD96BAE9828BE12528B50DA /* Rewards */,
 				7F670FA0EF119BD027AFEC1B /* Settings */,
 				39FB7DD7BC372D9CA052F417 /* Shopping */,
@@ -365,6 +398,14 @@
 			path = Yuvomi;
 			sourceTree = "<group>";
 		};
+		85792168460A1969DAA373EC /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				BADC5CC12B229119D3D0D7BF /* NotesView.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
 		88FB1BAF6E6EF757CA71A66E /* Budget */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +413,14 @@
 				CE7AD807E3F61E7A642569B2 /* BudgetViewModel.swift */,
 			);
 			path = Budget;
+			sourceTree = "<group>";
+		};
+		8A130843E5815BD41B72FDA6 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				E5FE46C38B6D30BAF6C3DC8F /* DocumentsView.swift */,
+			);
+			path = Documents;
 			sourceTree = "<group>";
 		};
 		ADA7FEE1AD0A7627AE4D3336 /* Networking */ = {
@@ -406,6 +455,7 @@
 				5548F41936C9F5C38C218C00 /* MoneyModelDecodingTests.swift */,
 				3F13C85B7A359AD5E589333A /* PeopleModelDecodingTests.swift */,
 				3ACCC83E60854F138A05F69D /* Phase1ModelDecodingTests.swift */,
+				AB1AB85FA59EC1031063C7DE /* RecordsModelDecodingTests.swift */,
 				042514348C5BC28AB2ABD314 /* ResponseCacheTests.swift */,
 				B80820632A8D6F4572E82A99 /* ServerURLTests.swift */,
 				894DFDEA5E75D5BD82CBEDAE /* UserDecodingTests.swift */,
@@ -565,10 +615,12 @@
 				EE67B11AE42EFF22C82114E7 /* DashboardSnapshot.swift in Sources */,
 				E32BA73D5324DEA924666D8A /* DashboardView.swift in Sources */,
 				481DC5BA826E189B5CA9DF46 /* DashboardViewModel.swift in Sources */,
+				9D010026DF3F5766664E905F /* DocumentsView.swift in Sources */,
 				603C2D4C93888AF68F55909C /* FamilyView.swift in Sources */,
 				DA122FFC251A1F42A90B6DEC /* FileSecretStore.swift in Sources */,
 				3E3AB35BC42B2B59476D67A8 /* HTTPClient.swift in Sources */,
 				42B20A8701EB3136D3B7A169 /* HealthView.swift in Sources */,
+				C6C3F66ECE1F1DCBE5AD0131 /* HousekeepingView.swift in Sources */,
 				B49016A76589E79F8BBB9CD7 /* JSONHelpers.swift in Sources */,
 				D4B125FC354884BEC8C3BCE8 /* KeychainStore.swift in Sources */,
 				6B18F89D30192D0ADEE7C4C2 /* KitchenModels.swift in Sources */,
@@ -579,12 +631,15 @@
 				A6D3AF80FC3D0AB4C820F1F6 /* ModuleKind.swift in Sources */,
 				0673CA2316E0C50E8E9648D0 /* ModulePlaceholderView.swift in Sources */,
 				141B3BFF3581E95344AE58B0 /* MoneyModels.swift in Sources */,
+				1F5CFCFB0BA5CCFA5222F426 /* NotesView.swift in Sources */,
 				D15B0518BC05CEFFEEB97BFB /* OnboardingFlowView.swift in Sources */,
 				C3885E7361FC399598DAB80D /* PantryView.swift in Sources */,
 				72BFA4557F3AABBE7A7FB085 /* PantryViewModel.swift in Sources */,
 				984AD269D0C240B5263A2C79 /* PeopleModels.swift in Sources */,
 				E36D9E91E0D448041C15FAC2 /* RecipesView.swift in Sources */,
 				09D8773EADBBFDEEC308C5CF /* RecipesViewModel.swift in Sources */,
+				8CE92AFFACFBAF28B01B6070 /* RecordsModels.swift in Sources */,
+				27012AFFD610D5B8F00DAFD1 /* RemindersView.swift in Sources */,
 				65D763831FC1D532EB56EA93 /* ResilientSecretStore.swift in Sources */,
 				910228F29A95A2AC9C2368DC /* ResponseCache.swift in Sources */,
 				9804D40F6BAF8485A1AD4E08 /* RewardsView.swift in Sources */,
@@ -621,6 +676,7 @@
 				48501B69F7758CAE4D1B0DFC /* MoneyModelDecodingTests.swift in Sources */,
 				912C2934D1F8FE1D50111A9B /* PeopleModelDecodingTests.swift in Sources */,
 				D760817AB92273F187109FDF /* Phase1ModelDecodingTests.swift in Sources */,
+				97DCFB86FF0EAF16450E285C /* RecordsModelDecodingTests.swift in Sources */,
 				77884C32F6708452F032FC4A /* ResponseCacheTests.swift in Sources */,
 				34C552D7DC4B4B0C8B963CA6 /* ServerURLTests.swift in Sources */,
 				AE520B147F9C1FB766C6CE37 /* UserDecodingTests.swift in Sources */,
