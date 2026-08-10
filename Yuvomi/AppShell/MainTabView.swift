@@ -16,19 +16,19 @@ struct MainTabView: View {
             .tag(Tab.home)
 
             NavigationStack {
-                ModulePlaceholderView(module: .tasks)
+                TasksView()
             }
             .tabItem { Label("Tasks", systemImage: ModuleKind.tasks.systemImage) }
             .tag(Tab.tasks)
 
             NavigationStack {
-                ModulePlaceholderView(module: .shopping)
+                ShoppingView()
             }
             .tabItem { Label("Shopping", systemImage: ModuleKind.shopping.systemImage) }
             .tag(Tab.shopping)
 
             NavigationStack {
-                ModulePlaceholderView(module: .calendar)
+                CalendarAgendaView()
             }
             .tabItem { Label("Calendar", systemImage: ModuleKind.calendar.systemImage) }
             .tag(Tab.calendar)

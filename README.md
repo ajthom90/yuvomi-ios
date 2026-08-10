@@ -14,8 +14,8 @@ Point the app at **your** server. There is no vendor cloud, no account with us, 
 
 | Phase | Scope | Status |
 |-------|--------|--------|
-| **0 — Foundation** | Connect, auth (token + password), dashboard, shell, settings, module map | **Shipped (v0.1.0 shell)** |
-| 1 — Daily drivers | Tasks, Shopping, Calendar | Planned |
+| **0 — Foundation** | Connect, auth (token + password), dashboard, shell, settings, module map | **Shipped** |
+| **1 — Daily drivers** | Tasks, Shopping, Calendar (core CRUD) | **Shipped** |
 | 2 — Kitchen | Meals, Recipes, Pantry | Planned |
 | 3 — Money | Budget, Split expenses | Planned |
 | 4 — People & health | Family, Contacts, Birthdays, Health, Rewards | Planned |
